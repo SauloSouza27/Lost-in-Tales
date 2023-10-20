@@ -15,6 +15,12 @@ public class PlayerControler : MonoBehaviour
     private GameObject selectedBlock;
     private Vector3 sokobanBlockOffset;
 
+    private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     private void Update()
     {
         if (!isMoving)
@@ -154,7 +160,7 @@ public class PlayerControler : MonoBehaviour
     private IEnumerator MovePlayer()
     {
         isMoving = true;
-
+        animator.SetBool("IsMoving", true);
         while (Vector3.Distance(transform.position, targetPosition) > 0.01f)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
@@ -162,6 +168,7 @@ public class PlayerControler : MonoBehaviour
         }
 
         isMoving = false;
+        animator.SetBool("IsMoving", false);
 
         if (selectedBlock != null)
         {
