@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 targetPosition;
     private bool isMoving = false;
-    private Quaternion targetRotation; // New variable to store the target rotation.
+    private Quaternion targetRotation;
 
     private int currentLayer = 0;
 
@@ -78,10 +78,8 @@ public class PlayerController : MonoBehaviour
                     {
                         targetPosition = hitPosition + Vector3.up;
 
-                        // Calculate the rotation based on the movement direction.
                         CalculateRotation(direction);
 
-                        // Apply the target rotation before moving.
                         transform.rotation = targetRotation;
 
                         StartCoroutine(MovePlayer());
@@ -96,10 +94,8 @@ public class PlayerController : MonoBehaviour
                     {
                         targetPosition = hitPosition;
 
-                        // Calculate the rotation based on the movement direction.
                         CalculateRotation(direction);
 
-                        // Apply the target rotation before moving.
                         transform.rotation = targetRotation;
 
                         StartCoroutine(MovePlayer());
@@ -120,10 +116,8 @@ public class PlayerController : MonoBehaviour
                         {
                             targetPosition = hitPosition + Vector3.up;
 
-                            // Calculate the rotation based on the movement direction.
                             CalculateRotation(direction);
 
-                            // Apply the target rotation before moving.
                             transform.rotation = targetRotation;
 
                             StartCoroutine(MovePlayer());
@@ -138,10 +132,8 @@ public class PlayerController : MonoBehaviour
                         {
                             targetPosition = hitPosition;
 
-                            // Calculate the rotation based on the movement direction.
                             CalculateRotation(direction);
 
-                            // Apply the target rotation before moving.
                             transform.rotation = targetRotation;
 
                             StartCoroutine(MovePlayer());
@@ -170,7 +162,6 @@ public class PlayerController : MonoBehaviour
             {
                 targetPosition = selectedBlock.transform.position + Vector3.up;
 
-                // Calculate the rotation based on the movement direction.
                 Vector3 direction = targetPosition - transform.position;
                 CalculateRotation(direction);
 
@@ -222,7 +213,7 @@ public class PlayerController : MonoBehaviour
     private void CalculateRotation(Vector3 direction)
     {
         float angle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
-        angle = Mathf.Round(angle / 90) * 90; // Round to the nearest multiple of 90 degrees.
+        angle = Mathf.Round(angle / 90) * 90;
         targetRotation = Quaternion.Euler(0, angle, 0);
     }
 }
