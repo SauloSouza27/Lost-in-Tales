@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Sokoban
   - Movable
-  - static
   layers:
   - Default
   - TransparentFX
@@ -16,8 +15,8 @@ TagManager:
   - UI
   - Player
   - Path
-  - Sokoban
-  - Static
+  - 
+  - 
   - 
   - 
   - 
