@@ -7,7 +7,7 @@ public class BoxScript : MonoBehaviour
     // Start is called before the first frame update
     private float initialYPosition;
 
-    private PlayerControler isMovingReference;
+    private PlayerController isMovingReference;
 
     private Vector3 initialPosition;
 
@@ -18,7 +18,7 @@ public class BoxScript : MonoBehaviour
     private void Start()
     {
         initialYPosition = transform.position.y;
-        isMovingReference = GetComponent<PlayerControler>();
+        isMovingReference = GetComponent<PlayerController>();
         initialPosition = transform.position;
         
     }
@@ -39,12 +39,5 @@ public class BoxScript : MonoBehaviour
             collisionCheck = true;
             transform.position = initialPosition;
         }
-        else
-        {
-            collisionCheck = false;
-        }
-       
-
-        
     }
 }

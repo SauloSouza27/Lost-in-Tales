@@ -7,7 +7,7 @@ public class LockYAxis : MonoBehaviour
 {
     private float initialYPosition;
 
-    private PlayerControler isMovingReference;
+    private PlayerController isMovingReference;
 
     private Vector3 initialPosition;
 
@@ -16,7 +16,7 @@ public class LockYAxis : MonoBehaviour
     private void Start()
     {
         initialYPosition = transform.position.y;
-        isMovingReference = GetComponent<PlayerControler>();
+        isMovingReference = GetComponent<PlayerController>();
         
     }
 

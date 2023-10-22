@@ -10370,6 +10370,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 517750959386364296, guid: c4078fb3b06a49a4abc378836ef03535, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1298050742137389200, guid: c48659ca1ceb2f443a0a00ec8811c9cc, type: 3}
     - target: {fileID: 4983126126441712453, guid: c4078fb3b06a49a4abc378836ef03535, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -10410,11 +10414,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6485107232080432690, guid: c4078fb3b06a49a4abc378836ef03535, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1092c7be1403b7c4ca5caa22f4eebe19, type: 2}
     - target: {fileID: 7435933756188734737, guid: c4078fb3b06a49a4abc378836ef03535, type: 3}
       propertyPath: m_Name
       value: Sokoban
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5079098614101543588, guid: c4078fb3b06a49a4abc378836ef03535, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10753,7 +10762,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sokoban (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5079098614101543588, guid: c4078fb3b06a49a4abc378836ef03535, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
