@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements.Experimental;
 
-public class LockYAxis : MonoBehaviour
+public class BoxScript : MonoBehaviour
 {
+    // Start is called before the first frame update
     private float initialYPosition;
 
     private PlayerControler isMovingReference;
 
     private Vector3 initialPosition;
+
+    public bool collisionCheck = false;
 
     private bool value;
 
@@ -17,6 +19,7 @@ public class LockYAxis : MonoBehaviour
     {
         initialYPosition = transform.position.y;
         isMovingReference = GetComponent<PlayerControler>();
+        initialPosition = transform.position;
         
     }
 
@@ -33,8 +36,14 @@ public class LockYAxis : MonoBehaviour
         {
             //If the GameObject's name matches the one you suggest, output this message in the console
             Debug.Log("Do something here");
+            collisionCheck = true;
             transform.position = initialPosition;
         }
+        else
+        {
+            collisionCheck = false;
+        }
+       
 
         
     }

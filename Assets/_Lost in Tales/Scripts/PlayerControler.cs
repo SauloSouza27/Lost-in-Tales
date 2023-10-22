@@ -8,19 +8,34 @@ public class PlayerController : MonoBehaviour
     public float layerHeight = 1.0f;
 
     private Vector3 targetPosition;
+<<<<<<< Updated upstream
     private bool isMoving = false;
     private Quaternion targetRotation;
+=======
+    public bool isMoving = false;
+
+    public GameObject box;
+>>>>>>> Stashed changes
 
     private int currentLayer = 0;
 
     private GameObject selectedBlock;
     private Vector3 sokobanBlockOffset;
 
+<<<<<<< Updated upstream
     private Animator animator;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+=======
+    private bool collisionChecks = false;
+
+    private void Start()
+    {
+        
+
+>>>>>>> Stashed changes
     }
 
     private void Update()
@@ -54,9 +69,15 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (selectedBlock != null)
+        
+        collisionChecks = box.GetComponent<BoxScript>().collisionCheck;
+
+        Debug.Log(collisionChecks);
+
+        if (selectedBlock != null && !collisionChecks)
         {
             selectedBlock.transform.position = transform.position + sokobanBlockOffset;
+            
         }
     }
 
@@ -199,7 +220,6 @@ public class PlayerController : MonoBehaviour
             selectedBlock = null;
         }
 
-        Debug.Log("Current Layer: " + currentLayer);
     }
 
     private bool IsAdjacent(Vector3 position1, Vector3 position2)
