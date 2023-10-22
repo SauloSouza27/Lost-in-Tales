@@ -6,10 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-    void Update()
-    {
-        
-    }
+
 
     public void Resume () {
         Time.timeScale = 1f;
