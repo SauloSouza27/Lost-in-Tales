@@ -40,4 +40,9 @@ public class BoxScript : MonoBehaviour
             transform.position = initialPosition;
         }
     }
+
+    public void SetInitialPosition(Vector3 actualPos)
+    {
+        initialPosition = actualPos;
+    }
 }

@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
 
-    private BoxScript boxScript;
     private bool collisionChecks = false;
 
     private void Start()
@@ -53,7 +52,6 @@ public class PlayerController : MonoBehaviour
                             {
                                 HandleSokobanBlock(hit.collider);
                                 box = hit.collider.gameObject;
-                                boxScript = box.GetComponent<BoxScript>();
                             }
                         }
                     }
@@ -61,8 +59,11 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        
-        collisionChecks = boxScript.collisionCheck;
+        if (box != null)
+        {
+            collisionChecks = box.GetComponent<BoxScript>().collisionCheck;
+        }
+
 
         Debug.Log(collisionChecks);
 
@@ -209,6 +210,8 @@ public class PlayerController : MonoBehaviour
         if (selectedBlock != null)
         {
             selectedBlock = null;
+            box.GetComponent<BoxScript>().collisionCheck = false;
+            box.GetComponent<BoxScript>().SetInitialPosition(box.transform.position);
         }
 
     }
