@@ -15,8 +15,15 @@ public class BoxScript : MonoBehaviour
 
     private bool value;
 
+    private Vector3 provisorioPosition;
+
+    public AudioSource audiosource;
+
+    
+
     private void Start()
     {
+        provisorioPosition = transform.position;
         initialYPosition = transform.position.y;
         isMovingReference = GetComponent<PlayerController>();
         initialPosition = transform.position;
@@ -25,6 +32,18 @@ public class BoxScript : MonoBehaviour
 
     private void Update()
     {
+        if (transform.position != provisorioPosition)
+        {
+
+          if (!audiosource.isPlaying)
+            {
+                audiosource.Play();
+                
+            }
+
+            provisorioPosition = transform.position;
+
+        }
         Vector3 newPosition = new Vector3(transform.position.x, initialYPosition, transform.position.z);
         transform.position = newPosition;
 
@@ -38,6 +57,8 @@ public class BoxScript : MonoBehaviour
             Debug.Log("Do something here");
             collisionCheck = true;
             transform.position = initialPosition;
+
+        
         }
     }
 

@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
 
     private bool collisionChecks = false;
 
+    public AudioSource audiosource;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -47,11 +49,13 @@ public class PlayerController : MonoBehaviour
                             if (hit.collider.CompareTag("Movable"))
                             {
                                 HandleMovableBlock(hit.collider);
+                                
                             }
                             else if (hit.collider.CompareTag("Sokoban"))
                             {
                                 HandleSokobanBlock(hit.collider);
                                 box = hit.collider.gameObject;
+                                
                             }
                         }
                     }
@@ -70,6 +74,7 @@ public class PlayerController : MonoBehaviour
         if (selectedBlock != null && !collisionChecks)
         {
             selectedBlock.transform.position = transform.position + sokobanBlockOffset;
+                       
         }
     }
 
@@ -83,6 +88,7 @@ public class PlayerController : MonoBehaviour
 
         if (selectedBlock != null && selectedBlock.CompareTag("Sokoban"))
         {
+            
             if (Mathf.Abs(hitLayer - currentLayer) <= maxLayerDifference)
             {
                 if (hitLayer == currentLayer + 1 || hitLayer == currentLayer - 1)
@@ -121,6 +127,7 @@ public class PlayerController : MonoBehaviour
             RaycastHit sokobanHit;
             if (!Physics.Raycast(hitPosition, Vector3.up, out sokobanHit, 1.0f) || !sokobanHit.collider.CompareTag("Sokoban"))
             {
+                
                 if (Mathf.Abs(hitLayer - currentLayer) <= maxLayerDifference)
                 {
                     if (hitLayer == currentLayer + 1 || hitLayer == currentLayer - 1)
@@ -162,14 +169,17 @@ public class PlayerController : MonoBehaviour
         if (selectedBlock == null)
         {
             int hitLayer = Mathf.RoundToInt(sokobanCollider.transform.position.y);
+
             if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(sokobanCollider.transform.position, transform.position))
             {
                 selectedBlock = sokobanCollider.gameObject;
                 sokobanBlockOffset = selectedBlock.transform.position - transform.position;
+                
             }
         }
         else if (selectedBlock == sokobanCollider.gameObject)
         {
+      
             int hitLayer = Mathf.RoundToInt(selectedBlock.transform.position.y);
             if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(selectedBlock.transform.position, transform.position))
             {
