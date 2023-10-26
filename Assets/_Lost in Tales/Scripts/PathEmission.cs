@@ -11,6 +11,7 @@ public class PathEmission : MonoBehaviour
     {
         meshRenderer = this.GetComponent<MeshRenderer>();
         material = meshRenderer.material;
+        material.DisableKeyword("_EMISSION");
     }
 
     private void OnCollisionStay(Collision collision)
