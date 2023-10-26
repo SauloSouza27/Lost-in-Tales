@@ -863,9 +863,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: roof_lamp (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3356453002185520569, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 127
+      objectReference: {fileID: 0}
     - target: {fileID: 4578156032180840932, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
       propertyPath: m_CastShadows
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4578156032180840932, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
       propertyPath: m_Materials.Array.size
@@ -5605,9 +5609,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: roof_lamp (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3356453002185520569, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 127
+      objectReference: {fileID: 0}
     - target: {fileID: 4578156032180840932, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
       propertyPath: m_CastShadows
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4578156032180840932, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
       propertyPath: m_Materials.Array.size
@@ -5961,6 +5969,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8516685694174016053, guid: 39886d11015b16a47ad5b69e106ec33e, type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516685694174016053, guid: 39886d11015b16a47ad5b69e106ec33e, type: 3}
       propertyPath: m_Shadows.m_Resolution
       value: 128
       objectReference: {fileID: 0}
@@ -6120,9 +6132,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: roof_lamp
       objectReference: {fileID: 0}
+    - target: {fileID: 3356453002185520569, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 127
+      objectReference: {fileID: 0}
     - target: {fileID: 4578156032180840932, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
       propertyPath: m_CastShadows
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4578156032180840932, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
       propertyPath: m_Materials.Array.size
@@ -7415,6 +7431,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8516685694174016053, guid: 39886d11015b16a47ad5b69e106ec33e, type: 3}
       propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516685694174016053, guid: 39886d11015b16a47ad5b69e106ec33e, type: 3}
+      propertyPath: m_Shadows.m_Strength
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8516685694174016053, guid: 39886d11015b16a47ad5b69e106ec33e, type: 3}
@@ -11519,6 +11539,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8516685694174016053, guid: 39886d11015b16a47ad5b69e106ec33e, type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516685694174016053, guid: 39886d11015b16a47ad5b69e106ec33e, type: 3}
       propertyPath: m_Shadows.m_Resolution
       value: 128
       objectReference: {fileID: 0}
@@ -12596,9 +12620,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: roof_lamp (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3356453002185520569, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 127
+      objectReference: {fileID: 0}
     - target: {fileID: 4578156032180840932, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
       propertyPath: m_CastShadows
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4578156032180840932, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
       propertyPath: m_Materials.Array.size
@@ -13964,6 +13992,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8516685694174016053, guid: 39886d11015b16a47ad5b69e106ec33e, type: 3}
       propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516685694174016053, guid: 39886d11015b16a47ad5b69e106ec33e, type: 3}
+      propertyPath: m_Shadows.m_Strength
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8516685694174016053, guid: 39886d11015b16a47ad5b69e106ec33e, type: 3}
