@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private int currentLayer = 0;
 
     private GameObject selectedBlock;
+    private bool isSokobanSelected = false;
     private Vector3 sokobanBlockOffset;
 
     private Animator animator;
@@ -23,6 +24,8 @@ public class PlayerController : MonoBehaviour
     private bool collisionChecks = false;
 
     public AudioSource audiosource;
+
+    public Transform player;
 
     private void Start()
     {
@@ -67,7 +70,12 @@ public class PlayerController : MonoBehaviour
         {
             collisionChecks = box.GetComponent<BoxScript>().collisionCheck;
         }
-
+        if (isSokobanSelected && selectedBlock != null)
+        {
+            Vector3 directionToBlock = selectedBlock.transform.position - transform.position;
+            Quaternion targetRotation = Quaternion.LookRotation(directionToBlock);
+            transform.rotation = targetRotation;
+        }
 
         Debug.Log(collisionChecks);
 
@@ -173,6 +181,10 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(sokobanCollider.transform.position, transform.position))
             {
                 selectedBlock = sokobanCollider.gameObject;
+                isSokobanSelected = true;
+                Vector3 currentRotation = player.transform.rotation.eulerAngles;
+                currentRotation.y -= 40f;
+                player.transform.rotation = Quaternion.Euler(currentRotation);
                 sokobanBlockOffset = selectedBlock.transform.position - transform.position;
                 
             }
@@ -192,6 +204,10 @@ public class PlayerController : MonoBehaviour
                 currentLayer = hitLayer;
             }
             selectedBlock = null;
+            Vector3 currentRotation = player.transform.rotation.eulerAngles;
+            currentRotation.y += 40f;
+            player.transform.rotation = Quaternion.Euler(currentRotation);
+            isSokobanSelected = false;
         }
         else
         {
@@ -199,6 +215,10 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(sokobanCollider.transform.position, transform.position))
             {
                 selectedBlock = sokobanCollider.gameObject;
+                Vector3 currentRotation = player.transform.rotation.eulerAngles;
+                currentRotation.y -= 40f;
+                player.transform.rotation = Quaternion.Euler(currentRotation);
+                isSokobanSelected = true;
                 sokobanBlockOffset = selectedBlock.transform.position - transform.position;
             }
         }
@@ -207,7 +227,14 @@ public class PlayerController : MonoBehaviour
     private IEnumerator MovePlayer()
     {
         isMoving = true;
-        animator.SetBool("IsMoving", true);
+        if (isSokobanSelected == true)
+        {
+            animator.SetBool("IsPushing", true);
+        }
+        else
+        {
+            animator.SetBool("IsMoving", true);
+        }
         while (Vector3.Distance(transform.position, targetPosition) > 0.01f)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
@@ -216,10 +243,15 @@ public class PlayerController : MonoBehaviour
 
         isMoving = false;
         animator.SetBool("IsMoving", false);
+        animator.SetBool("IsPushing", false);
 
         if (selectedBlock != null)
         {
             selectedBlock = null;
+            Vector3 currentRotation = player.transform.rotation.eulerAngles;
+            currentRotation.y += 40f;
+            player.transform.rotation = Quaternion.Euler(currentRotation);
+            isSokobanSelected = false;
             box.GetComponent<BoxScript>().collisionCheck = false;
             box.GetComponent<BoxScript>().SetInitialPosition(box.transform.position);
         }
