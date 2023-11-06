@@ -14509,7 +14509,7 @@ PrefabInstance:
       objectReference: {fileID: 1795608532}
     - target: {fileID: 2833563932118981475, guid: 7c98cb658486e4748a70cd45870bef0c, type: 3}
       propertyPath: moveSpeed
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2833563932118981475, guid: 7c98cb658486e4748a70cd45870bef0c, type: 3}
       propertyPath: audiosource
