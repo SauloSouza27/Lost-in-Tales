@@ -75,7 +75,10 @@ public class PlayerController : MonoBehaviour
         if (isSokobanSelected && selectedBlock != null)
         {
             Vector3 directionToBlock = selectedBlock.transform.position - transform.position;
-            Quaternion targetRotation = Quaternion.LookRotation(directionToBlock);
+
+            Vector3 directionXZ = new Vector3(directionToBlock.x, 0, directionToBlock.z);
+
+            CalculateRotation(directionXZ);
             transform.rotation = targetRotation;
         }
 
@@ -150,6 +153,7 @@ public class PlayerController : MonoBehaviour
 
                             transform.rotation = targetRotation;
 
+                            isClimbing = true;
                             StartCoroutine(MovePlayer());
                             currentLayer = hitLayer;
                         }
