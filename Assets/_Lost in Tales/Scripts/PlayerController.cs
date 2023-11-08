@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private bool isSokobanSelected = false;
     private Vector3 sokobanBlockOffset;
 
+    private bool isJumping = false;
     private bool isClimbing = false;
 
     private Animator animator;
@@ -75,7 +76,8 @@ public class PlayerController : MonoBehaviour
         if (isSokobanSelected && selectedBlock != null)
         {
             Vector3 directionToBlock = selectedBlock.transform.position - transform.position;
-            Quaternion targetRotation = Quaternion.LookRotation(directionToBlock);
+            Vector3 directionXZ = new Vector3(directionToBlock.x, 0, directionToBlock.z);
+            CalculateRotation(directionXZ);
             transform.rotation = targetRotation;
         }
 
@@ -125,6 +127,15 @@ public class PlayerController : MonoBehaviour
 
                         transform.rotation = targetRotation;
 
+
+                        if (hitLayer == currentLayer + 1)
+                        {
+                            isClimbing = true;
+                        }
+                        if (hitLayer == currentLayer - 1)
+                        {
+                            isJumping = true;
+                        }
                         StartCoroutine(MovePlayer());
                         currentLayer = hitLayer;
                     }
@@ -169,6 +180,15 @@ public class PlayerController : MonoBehaviour
 
                             transform.rotation = targetRotation;
 
+
+                            if (hitLayer == currentLayer + 1)
+                            {
+                                isClimbing = true;
+                            }
+                            if (hitLayer == currentLayer - 1)
+                            {
+                                isJumping = true;
+                            }
                             StartCoroutine(MovePlayer());
                             currentLayer = hitLayer;
                         }
@@ -218,7 +238,14 @@ public class PlayerController : MonoBehaviour
                 Vector3 direction = targetPosition - transform.position;
                 CalculateRotation(direction);
 
-                isClimbing = true;
+                if (hitLayer == currentLayer + 1)
+                {
+                    isClimbing = true;
+                }
+                if (hitLayer == currentLayer - 1)
+                {
+                    isJumping = true;
+                }
                 StartCoroutine(MovePlayer());
                 currentLayer = hitLayer;
             }
@@ -240,7 +267,14 @@ public class PlayerController : MonoBehaviour
     private IEnumerator MovePlayer()
     {
         isMoving = true;
-        if (isClimbing == true)
+        if (isJumping == true)
+        {
+            animator.SetBool("IsJumping", true);
+            Vector3 currentRotation = player.transform.rotation.eulerAngles;
+            currentRotation.y -= 40f;
+            player.transform.rotation = Quaternion.Euler(currentRotation);
+        }
+        else if (isClimbing == true)
         {
             animator.SetBool("IsClimbing", true);
             Vector3 currentRotation = player.transform.rotation.eulerAngles;
@@ -265,6 +299,7 @@ public class PlayerController : MonoBehaviour
         }
 
         isMoving = false;
+        animator.SetBool("IsJumping", false);
         animator.SetBool("IsClimbing", false);
         animator.SetBool("IsMoving", false);
         animator.SetBool("IsPushing", false);
@@ -279,6 +314,13 @@ public class PlayerController : MonoBehaviour
             isClimbing = false;
             box.GetComponent<BoxScript>().collisionCheck = false;
             box.GetComponent<BoxScript>().SetInitialPosition(box.transform.position);
+        }
+        if (isJumping == true)
+        {
+            Vector3 currentRotation = player.transform.rotation.eulerAngles;
+            currentRotation.y += 40f;
+            player.transform.rotation = Quaternion.Euler(currentRotation);
+            isJumping = false;
         }
         if (isClimbing == true)
         {
