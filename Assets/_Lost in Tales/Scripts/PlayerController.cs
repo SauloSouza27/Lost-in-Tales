@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public int level;
+
     public float moveSpeed = 1.0f;
     public float layerHeight = 1.0f;
 
@@ -270,23 +272,32 @@ public class PlayerController : MonoBehaviour
         if (isJumping == true)
         {
             animator.SetBool("IsJumping", true);
-            Vector3 currentRotation = player.transform.rotation.eulerAngles;
-            currentRotation.y -= 40f;
-            player.transform.rotation = Quaternion.Euler(currentRotation);
+            if(level == 1)
+            {
+                Vector3 currentRotation = player.transform.rotation.eulerAngles;
+                currentRotation.y -= 40f;
+                player.transform.rotation = Quaternion.Euler(currentRotation);
+            }
         }
         else if (isClimbing == true)
         {
             animator.SetBool("IsClimbing", true);
-            Vector3 currentRotation = player.transform.rotation.eulerAngles;
-            currentRotation.y -= 40f;
-            player.transform.rotation = Quaternion.Euler(currentRotation);
+            if (level == 1)
+            {
+                Vector3 currentRotation = player.transform.rotation.eulerAngles;
+                currentRotation.y -= 40f;
+                player.transform.rotation = Quaternion.Euler(currentRotation);
+            }
         }
         else if (isSokobanSelected == true)
         {
             animator.SetBool("IsPushing", true);
-            Vector3 currentRotation = player.transform.rotation.eulerAngles;
-            currentRotation.y -= 40f;
-            player.transform.rotation = Quaternion.Euler(currentRotation);
+            if(level == 1)
+            {
+                Vector3 currentRotation = player.transform.rotation.eulerAngles;
+                currentRotation.y -= 40f;
+                player.transform.rotation = Quaternion.Euler(currentRotation);
+            }
         }
         else
         {
@@ -307,9 +318,12 @@ public class PlayerController : MonoBehaviour
         if (selectedBlock != null)
         {
             selectedBlock = null;
-            Vector3 currentRotation = player.transform.rotation.eulerAngles;
-            currentRotation.y += 40f;
-            player.transform.rotation = Quaternion.Euler(currentRotation);
+            if (level == 1)
+            {
+                Vector3 currentRotation = player.transform.rotation.eulerAngles;
+                currentRotation.y += 40f;
+                player.transform.rotation = Quaternion.Euler(currentRotation);
+            }
             isSokobanSelected = false;
             isClimbing = false;
             box.GetComponent<BoxScript>().collisionCheck = false;
@@ -317,16 +331,22 @@ public class PlayerController : MonoBehaviour
         }
         if (isJumping == true)
         {
-            Vector3 currentRotation = player.transform.rotation.eulerAngles;
-            currentRotation.y += 40f;
-            player.transform.rotation = Quaternion.Euler(currentRotation);
+            if (level == 1)
+            {
+                Vector3 currentRotation = player.transform.rotation.eulerAngles;
+                currentRotation.y += 40f;
+                player.transform.rotation = Quaternion.Euler(currentRotation);
+            }
             isJumping = false;
         }
         if (isClimbing == true)
         {
-            Vector3 currentRotation = player.transform.rotation.eulerAngles;
-            currentRotation.y += 40f;
-            player.transform.rotation = Quaternion.Euler(currentRotation);
+            if (level == 1)
+            {
+                Vector3 currentRotation = player.transform.rotation.eulerAngles;
+                currentRotation.y += 40f;
+                player.transform.rotation = Quaternion.Euler(currentRotation);
+            }
             isClimbing = false;
         }
 

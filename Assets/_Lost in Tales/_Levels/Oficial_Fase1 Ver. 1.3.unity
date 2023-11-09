@@ -14400,6 +14400,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2833563932118981475, guid: 7c98cb658486e4748a70cd45870bef0c, type: 3}
+      propertyPath: level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833563932118981475, guid: 7c98cb658486e4748a70cd45870bef0c, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1795608532}
