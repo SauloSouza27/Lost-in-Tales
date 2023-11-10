@@ -10639,7 +10639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65332e2dd5f9f1149960fffe723e0736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiVictory: {fileID: 0}
+  uiVictory: {fileID: 888719270}
 --- !u!1 &1624523806
 GameObject:
   m_ObjectHideFlags: 0
