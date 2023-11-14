@@ -224,6 +224,7 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(sokobanCollider.transform.position, transform.position))
             {
                 selectedBlock = sokobanCollider.gameObject;
+                selectedBlock.transform.GetChild(0).gameObject.SetActive(true);
                 isSokobanSelected = true;
                 sokobanBlockOffset = selectedBlock.transform.position - transform.position;
                 
@@ -251,6 +252,7 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(MovePlayer());
                 currentLayer = hitLayer;
             }
+            selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
             selectedBlock = null;
             isSokobanSelected = false;
         }
@@ -260,6 +262,7 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(sokobanCollider.transform.position, transform.position))
             {
                 selectedBlock = sokobanCollider.gameObject;
+                selectedBlock.transform.GetChild(0).gameObject.SetActive(true);
                 isSokobanSelected = true;
                 sokobanBlockOffset = selectedBlock.transform.position - transform.position;
             }
@@ -317,6 +320,7 @@ public class PlayerController : MonoBehaviour
 
         if (selectedBlock != null)
         {
+            selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
             selectedBlock = null;
             if (level == 1)
             {
