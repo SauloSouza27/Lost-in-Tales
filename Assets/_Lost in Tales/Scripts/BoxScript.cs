@@ -23,6 +23,7 @@ public class BoxScript : MonoBehaviour
 
     private void Start()
     {
+        transform.GetChild(0).gameObject.SetActive(false);
         provisorioPosition = transform.position;
         initialYPosition = transform.position.y;
         isMovingReference = GetComponent<PlayerController>();
