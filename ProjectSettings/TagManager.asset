@@ -7,6 +7,7 @@ TagManager:
   - Sokoban
   - Movable
   - static
+  - Vendinha
   layers:
   - Default
   - TransparentFX
@@ -19,8 +20,8 @@ TagManager:
   - Sokoban
   - Static
   - Objective
-  - 
-  - 
+  - Vaca
+  - Vendinha
   - 
   - 
   - 

@@ -23,7 +23,7 @@ public class BoxScript : MonoBehaviour
     private Material material;
     private Light onBoxLight;
 
-    float t = 0f;
+    private float t = 0f;
 
     private void Start()
     {
@@ -42,12 +42,11 @@ public class BoxScript : MonoBehaviour
 
     private void Update()
     {
-//        if (onBoxLight.enabled)
-//        {
-//            onBoxLight.intensity = Mathf.PingPong(t/4, 0.3f);
-//            t += Time.deltaTime;
-//            Debug.Log(t);
-//        }
+        if (onBoxLight != null && onBoxLight.enabled)
+        {
+            onBoxLight.intensity = Mathf.PingPong(t/3, 0.4f);
+            t += Time.deltaTime;
+        }
 
         if (transform.position != provisorioPosition)
         {
@@ -108,6 +107,7 @@ public class BoxScript : MonoBehaviour
 
     public void SetActiveOnBoxLight(bool active)
     {
+        t = 0f;
         if (active)
         {
             onBoxLight.enabled = true;
