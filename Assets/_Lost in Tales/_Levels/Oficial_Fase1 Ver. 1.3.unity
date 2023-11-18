@@ -528,10 +528,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
-    - target: {fileID: 341701826979199667, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (13)
@@ -1294,10 +1290,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
-    - target: {fileID: 341701826979199667, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (2)
@@ -1360,10 +1352,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1145784387}
     m_Modifications:
-    - target: {fileID: 1639109404702576701, guid: b321c4e36e1748a47b2e066eb5771fde, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5675009510468693803, guid: b321c4e36e1748a47b2e066eb5771fde, type: 3}
       propertyPath: m_Name
       value: floor_attic_sideU (1)
@@ -2196,10 +2184,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1145784387}
     m_Modifications:
-    - target: {fileID: 1639109404702576701, guid: b321c4e36e1748a47b2e066eb5771fde, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5675009510468693803, guid: b321c4e36e1748a47b2e066eb5771fde, type: 3}
       propertyPath: m_Name
       value: floor_attic_sideU (6)
@@ -4303,10 +4287,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1714580588329998216, guid: 1ac29750d9825d340966f1ce2cf49843, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5693,10 +5673,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
-    - target: {fileID: 341701826979199667, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (14)
@@ -5883,10 +5859,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
-    - target: {fileID: 341701826979199667, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center
@@ -6575,10 +6547,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
-    - target: {fileID: 341701826979199667, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (4)
@@ -8060,10 +8028,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7610738101964121529, guid: dd1e337b0732e4b478aad74446f8ae90, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8459,10 +8423,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
-    - target: {fileID: 341701826979199667, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (6)
@@ -8569,10 +8529,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_attic_cornerLB
       objectReference: {fileID: 0}
-    - target: {fileID: 7189480806273203858, guid: c014887693825044ea85a6a213522bbc, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8591,10 +8547,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1145784387}
     m_Modifications:
-    - target: {fileID: 1639109404702576701, guid: b321c4e36e1748a47b2e066eb5771fde, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5675009510468693803, guid: b321c4e36e1748a47b2e066eb5771fde, type: 3}
       propertyPath: m_Name
       value: floor_attic_sideU
@@ -10227,10 +10179,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_attic_cornerRB
       objectReference: {fileID: 0}
-    - target: {fileID: 8677719169840790284, guid: 7e20397e61d035145b34a593d30ec36d, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10834,10 +10782,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8662611278687405912, guid: bd2abd71ec7508849b7ddfc623aeee51, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10918,10 +10862,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
-    - target: {fileID: 341701826979199667, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (7)
@@ -11151,10 +11091,6 @@ PrefabInstance:
     - target: {fileID: 7024974906245626626, guid: cfe5bd524873dd346a88b6ab18bf04c5, type: 3}
       propertyPath: m_Name
       value: floor_attic_sideL (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8410439343163702845, guid: cfe5bd524873dd346a88b6ab18bf04c5, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12027,10 +11963,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2972386418971471248, guid: 894f601935de2fd4f85241c0efffff46, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5022502663306618880, guid: 894f601935de2fd4f85241c0efffff46, type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -15206,10 +15138,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_attic_sideL (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8410439343163702845, guid: cfe5bd524873dd346a88b6ab18bf04c5, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15621,10 +15549,6 @@ PrefabInstance:
     - target: {fileID: 7024974906245626626, guid: cfe5bd524873dd346a88b6ab18bf04c5, type: 3}
       propertyPath: m_Name
       value: floor_attic_sideL
-      objectReference: {fileID: 0}
-    - target: {fileID: 8410439343163702845, guid: cfe5bd524873dd346a88b6ab18bf04c5, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16258,11 +16182,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6741343764783553236, guid: 7c98cb658486e4748a70cd45870bef0c, type: 3}
       propertyPath: m_Size.x
-      value: 3
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 7203599167301495931, guid: 7c98cb658486e4748a70cd45870bef0c, type: 3}
       propertyPath: m_Size.z
-      value: 3
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 9114599715952712686, guid: 7c98cb658486e4748a70cd45870bef0c, type: 3}
       propertyPath: m_Name

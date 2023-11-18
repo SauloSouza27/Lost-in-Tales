@@ -19,7 +19,9 @@ public class BoxScript : MonoBehaviour
 
     public AudioSource audiosource;
 
-    
+    // Emission Visual Feedback
+    private MeshRenderer meshRenderer;
+    private Material material;
 
     private void Start()
     {
@@ -28,7 +30,11 @@ public class BoxScript : MonoBehaviour
         initialYPosition = transform.position.y;
         isMovingReference = GetComponent<PlayerController>();
         initialPosition = transform.position;
-        
+
+        // Emission Visual Feedback
+        meshRenderer = this.GetComponent<MeshRenderer>();
+        material = meshRenderer.material;
+        material.DisableKeyword("_EMISSION");
     }
 
     private void Update()
@@ -58,8 +64,30 @@ public class BoxScript : MonoBehaviour
             Debug.Log("Do something here");
             collisionCheck = true;
             transform.position = initialPosition;
+        }
 
-        
+        // Emission Visual Feedback
+        if (collision.CompareTag("Player"))
+        {
+            material.EnableKeyword("_EMISSION");
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        // Emission Visual Feedback
+        if (other.CompareTag("Player"))
+        {
+            material.EnableKeyword("_EMISSION");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            // Emission Visual Feedback
+            material.DisableKeyword("_EMISSION");
         }
     }
 
