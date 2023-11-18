@@ -3720,6 +3720,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2783855810231441747, guid: efba1e30bed600549a1277acdfe5ac1c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fd7bd6ae1a3566547bb2ea2f22a8c1b4, type: 2}
     - target: {fileID: 6070196561255705960, guid: efba1e30bed600549a1277acdfe5ac1c, type: 3}
       propertyPath: ShapeModule.m_Scale.z
       value: 0.96
@@ -10504,6 +10508,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4688147473642963629, guid: c4078fb3b06a49a4abc378836ef03535, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688147473642963629, guid: c4078fb3b06a49a4abc378836ef03535, type: 3}
+      propertyPath: m_Color.g
+      value: 0.10943909
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688147473642963629, guid: c4078fb3b06a49a4abc378836ef03535, type: 3}
+      propertyPath: m_Color.r
+      value: 0.764151
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688147473642963629, guid: c4078fb3b06a49a4abc378836ef03535, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688147473642963629, guid: c4078fb3b06a49a4abc378836ef03535, type: 3}
+      propertyPath: m_Intensity
+      value: 0.27
+      objectReference: {fileID: 0}
     - target: {fileID: 4983126126441712453, guid: c4078fb3b06a49a4abc378836ef03535, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -10543,6 +10567,10 @@ PrefabInstance:
     - target: {fileID: 4983126126441712453, guid: c4078fb3b06a49a4abc378836ef03535, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081500556745891331, guid: c4078fb3b06a49a4abc378836ef03535, type: 3}
+      propertyPath: m_Name
+      value: OnBoxLight
       objectReference: {fileID: 0}
     - target: {fileID: 7435933756188734737, guid: c4078fb3b06a49a4abc378836ef03535, type: 3}
       propertyPath: m_Name
@@ -16227,6 +16255,14 @@ PrefabInstance:
     - target: {fileID: 3697000441150530516, guid: 7c98cb658486e4748a70cd45870bef0c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741343764783553236, guid: 7c98cb658486e4748a70cd45870bef0c, type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7203599167301495931, guid: 7c98cb658486e4748a70cd45870bef0c, type: 3}
+      propertyPath: m_Size.z
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9114599715952712686, guid: 7c98cb658486e4748a70cd45870bef0c, type: 3}
       propertyPath: m_Name
