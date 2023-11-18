@@ -41345,10 +41345,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FEIJAO
       objectReference: {fileID: 0}
-    - target: {fileID: 6249718780488604482, guid: 61b620d98b0ba3c4c921d4a9fd847144, type: 3}
-      propertyPath: m_Center.x
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
