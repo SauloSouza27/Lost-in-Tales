@@ -44,8 +44,9 @@ public class BoxScript : MonoBehaviour
     {
         if (onBoxLight.enabled)
         {
-            onBoxLight.intensity = Mathf.PingPong(t/3, 0.3f);
+            onBoxLight.intensity = Mathf.PingPong(t/4, 0.3f);
             t += Time.deltaTime;
+            Debug.Log(t);
         }
 
         if (transform.position != provisorioPosition)
