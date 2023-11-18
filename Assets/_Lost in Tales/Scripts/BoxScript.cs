@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BoxScript : MonoBehaviour
 {
-    // Start is called before the first frame update
     private float initialYPosition;
 
     private PlayerController isMovingReference;
@@ -19,9 +18,12 @@ public class BoxScript : MonoBehaviour
 
     public AudioSource audiosource;
 
-    // Emission Visual Feedback
+    // Visual Feedback
     private MeshRenderer meshRenderer;
     private Material material;
+    private Light onBoxLight;
+
+    float t = 0f;
 
     private void Start()
     {
@@ -31,14 +33,21 @@ public class BoxScript : MonoBehaviour
         isMovingReference = GetComponent<PlayerController>();
         initialPosition = transform.position;
 
-        // Emission Visual Feedback
+        // Visual Feedback
         meshRenderer = this.GetComponent<MeshRenderer>();
         material = meshRenderer.material;
         material.DisableKeyword("_EMISSION");
+        onBoxLight = this.GetComponentInChildren<Light>();
     }
 
     private void Update()
     {
+        if (onBoxLight.enabled)
+        {
+            onBoxLight.intensity = Mathf.PingPong(t/3, 0.3f);
+            t += Time.deltaTime;
+        }
+
         if (transform.position != provisorioPosition)
         {
 
@@ -66,7 +75,7 @@ public class BoxScript : MonoBehaviour
             transform.position = initialPosition;
         }
 
-        // Emission Visual Feedback
+        // Visual Feedback
         if (collision.CompareTag("Player"))
         {
             material.EnableKeyword("_EMISSION");
@@ -75,7 +84,7 @@ public class BoxScript : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        // Emission Visual Feedback
+        // Visual Feedback
         if (other.CompareTag("Player"))
         {
             material.EnableKeyword("_EMISSION");
@@ -86,7 +95,7 @@ public class BoxScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Emission Visual Feedback
+            // Visual Feedback
             material.DisableKeyword("_EMISSION");
         }
     }
@@ -94,5 +103,17 @@ public class BoxScript : MonoBehaviour
     public void SetInitialPosition(Vector3 actualPos)
     {
         initialPosition = actualPos;
+    }
+
+    public void SetActiveOnBoxLight(bool active)
+    {
+        if (active)
+        {
+            onBoxLight.enabled = true;
+        }
+        else
+        {
+            onBoxLight.enabled = false;
+        }
     }
 }

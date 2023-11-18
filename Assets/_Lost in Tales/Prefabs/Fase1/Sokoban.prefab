@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4688147473642963629}
   - component: {fileID: 8104445823522708192}
   m_Layer: 8
-  m_Name: Point Light
+  m_Name: OnBoxLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,8 +127,8 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.22
+  m_Color: {r: 0.8679245, g: 0.20490244, b: 0.06959773, a: 1}
+  m_Intensity: 0.16
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

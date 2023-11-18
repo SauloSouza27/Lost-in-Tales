@@ -277,6 +277,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsJumping", true);
             if(level == 1)
             {
+                box.GetComponent<BoxScript>().SetActiveOnBoxLight(false);
                 Vector3 currentRotation = player.transform.rotation.eulerAngles;
                 currentRotation.y -= 40f;
                 player.transform.rotation = Quaternion.Euler(currentRotation);
@@ -352,6 +353,7 @@ public class PlayerController : MonoBehaviour
                 player.transform.rotation = Quaternion.Euler(currentRotation);
             }
             isClimbing = false;
+            box.GetComponent<BoxScript>().SetActiveOnBoxLight(true);
         }
 
     }
