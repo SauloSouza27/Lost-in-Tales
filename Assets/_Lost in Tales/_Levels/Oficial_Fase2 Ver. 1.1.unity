@@ -41315,19 +41315,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 532374993475793525, guid: 61b620d98b0ba3c4c921d4a9fd847144, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.76758164
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 532374993475793525, guid: 61b620d98b0ba3c4c921d4a9fd847144, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 532374993475793525, guid: 61b620d98b0ba3c4c921d4a9fd847144, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6409513
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 532374993475793525, guid: 61b620d98b0ba3c4c921d4a9fd847144, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 532374993475793525, guid: 61b620d98b0ba3c4c921d4a9fd847144, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -41335,7 +41335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 532374993475793525, guid: 61b620d98b0ba3c4c921d4a9fd847144, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 79.726
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 532374993475793525, guid: 61b620d98b0ba3c4c921d4a9fd847144, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -41344,10 +41344,6 @@ PrefabInstance:
     - target: {fileID: 5220751534077427576, guid: 61b620d98b0ba3c4c921d4a9fd847144, type: 3}
       propertyPath: m_Name
       value: FEIJAO
-      objectReference: {fileID: 0}
-    - target: {fileID: 5220751534077427576, guid: 61b620d98b0ba3c4c921d4a9fd847144, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
