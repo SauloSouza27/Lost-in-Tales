@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8187057970289206434}
   - component: {fileID: 4459120728579217389}
   - component: {fileID: 6876979562108563843}
+  - component: {fileID: 3449812438564902871}
   m_Layer: 12
   m_Name: VENDINHA
   m_TagString: Vendinha
@@ -100,9 +101,26 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.2380503, y: 1.4854827, z: 0.5924676}
   m_Center: {x: 0.5792154, y: 0.7421203, z: -0.23483668}
+--- !u!114 &3449812438564902871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6135603050247224413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b234df577d65344bfc13dc7312b3a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cow: {fileID: 0}
+  bean: {fileID: 0}
+  beanLight: {fileID: 0}
+  timeForSwitch: 1
+  faseTime: 7
