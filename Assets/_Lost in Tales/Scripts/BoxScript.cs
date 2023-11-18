@@ -42,12 +42,12 @@ public class BoxScript : MonoBehaviour
 
     private void Update()
     {
-        if (onBoxLight.enabled)
-        {
-            onBoxLight.intensity = Mathf.PingPong(t/4, 0.3f);
-            t += Time.deltaTime;
-            Debug.Log(t);
-        }
+//        if (onBoxLight.enabled)
+//        {
+//            onBoxLight.intensity = Mathf.PingPong(t/4, 0.3f);
+//            t += Time.deltaTime;
+//            Debug.Log(t);
+//        }
 
         if (transform.position != provisorioPosition)
         {

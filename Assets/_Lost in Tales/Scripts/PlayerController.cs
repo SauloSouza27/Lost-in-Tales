@@ -274,13 +274,13 @@ public class PlayerController : MonoBehaviour
         isMoving = true;
         if (isJumping == true)
         {
-            animator.SetBool("IsJumping", true);
+            animator.SetBool("IsJumping", true);            
             if(level == 1)
-            {
-                box.GetComponent<BoxScript>().SetActiveOnBoxLight(false);
+            {                
                 Vector3 currentRotation = player.transform.rotation.eulerAngles;
                 currentRotation.y -= 40f;
                 player.transform.rotation = Quaternion.Euler(currentRotation);
+//                box.GetComponent<BoxScript>().SetActiveOnBoxLight(false);
             }
         }
         else if (isClimbing == true)
@@ -353,7 +353,7 @@ public class PlayerController : MonoBehaviour
                 player.transform.rotation = Quaternion.Euler(currentRotation);
             }
             isClimbing = false;
-            box.GetComponent<BoxScript>().SetActiveOnBoxLight(true);
+//            box.GetComponent<BoxScript>().SetActiveOnBoxLight(true);
         }
 
     }
