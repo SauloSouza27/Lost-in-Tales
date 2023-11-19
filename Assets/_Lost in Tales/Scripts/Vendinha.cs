@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Vendinha : MonoBehaviour
 {
-    [SerializeField] private GameObject cow, bean;
-    [SerializeField] private Light beanLight;
+    [SerializeField] private GameObject vaca, feijao;
+    [SerializeField] private Light luzFeijao;
     [SerializeField] private float timeForSwitch = 1f;
 
     [SerializeField] private float faseTime = 1.0f;
@@ -13,9 +13,9 @@ public class Vendinha : MonoBehaviour
 
     private void Update()
     {
-        if (beanLight.enabled)
+        if (luzFeijao.enabled)
         {
-            beanLight.intensity = Mathf.PingPong(t * faseTime, 12f);
+            luzFeijao.intensity = Mathf.PingPong(t * faseTime, 12f);
             t += Time.deltaTime;
         }
     }
@@ -39,11 +39,11 @@ public class Vendinha : MonoBehaviour
         yield return new WaitForSeconds(timeForSwitch);
         if (active)
         {
-            cow.SetActive(true);
+            vaca.SetActive(true);
         }
         else
         {
-            cow.SetActive(false);
+            vaca.SetActive(false);
         }
     }
     private IEnumerator SetActiveBean(bool active)
@@ -52,15 +52,15 @@ public class Vendinha : MonoBehaviour
 
         if (active)
         {
-            bean.SetActive(true);
+            feijao.SetActive(true);
 
-            beanLight.enabled = active;
+            luzFeijao.enabled = active;
             yield return new WaitForSeconds(10.0f);
-            beanLight.enabled = false;
+            luzFeijao.enabled = false;
         }
         else
         {
-            bean.SetActive(false);
+            feijao.SetActive(false);
         }
     }
 }
