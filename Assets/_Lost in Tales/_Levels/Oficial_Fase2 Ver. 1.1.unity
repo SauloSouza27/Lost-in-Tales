@@ -9571,7 +9571,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1554022082}
+        m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
+        m_MethodName: SetSfxVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &434488936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30284,6 +30296,7 @@ GameObject:
   - component: {fileID: 1554022079}
   - component: {fileID: 1554022078}
   - component: {fileID: 1554022077}
+  - component: {fileID: 1554022082}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -30389,6 +30402,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1554022082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554022076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e750d9a3a8eed1d4680c54b02838ea43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeMixer: {fileID: 24100000, guid: 46578639e95aa3241aaf6514dfd5abf8, type: 2}
+  musicSlider: {fileID: 1866049100}
+  sfxSlider: {fileID: 434344717}
 --- !u!4 &1557779257 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1737898043070937579, guid: 9e1b199272aaaba45a6eb02af3889b44, type: 3}
@@ -36109,7 +36137,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1554022082}
+        m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
+        m_MethodName: SetMusicVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1868140233 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2471425777945339677, guid: fe1bfb579806ec24d9b0e27cd6b42d3c, type: 3}
