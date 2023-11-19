@@ -7,6 +7,9 @@ TagManager:
   - Sokoban
   - Movable
   - static
+  - Vendinha
+  - Pushable
+  - PeDeFeijao
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - Sokoban
   - Static
   - Objective
-  - 
+  - ObjectiveFase2
   - 
   - 
   - 

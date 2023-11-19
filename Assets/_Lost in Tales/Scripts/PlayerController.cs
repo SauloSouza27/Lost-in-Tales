@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
                                 HandleMovableBlock(hit.collider);
                                 
                             }
-                            else if (hit.collider.CompareTag("Sokoban") && currentLayer != 1)
+                            else if (hit.collider.CompareTag("Sokoban") && currentLayer != 1 || hit.collider.CompareTag("Pushable"))
                             {
                                 HandleSokobanBlock(hit.collider);
                                 box = hit.collider.gameObject;
@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour
 
         foreach (var hit in hits)
         {
-            if (hit.CompareTag("Sokoban"))
+            if (hit.CompareTag("Sokoban")|| hit.CompareTag("Pushable"))
             {
                 hasSokobanOnSameTile = true;
                 break;
@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour
 
         
 
-        if (selectedBlock != null && selectedBlock.CompareTag("Sokoban"))
+        if (selectedBlock != null && selectedBlock.CompareTag("Sokoban") || selectedBlock != null && selectedBlock.CompareTag("Pushable"))
         {
             
             if (Mathf.Abs(hitLayer - currentLayer) <= maxLayerDifference)
@@ -167,7 +167,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             RaycastHit sokobanHit;
-            if (!Physics.Raycast(hitPosition, Vector3.up, out sokobanHit, 1.0f) || !sokobanHit.collider.CompareTag("Sokoban"))
+            if (!Physics.Raycast(hitPosition, Vector3.up, out sokobanHit, 1.0f) || !sokobanHit.collider.CompareTag("Sokoban") || !sokobanHit.collider.CompareTag("Pushable"))
             {
                 
                 if (Mathf.Abs(hitLayer - currentLayer) <= maxLayerDifference)
@@ -216,7 +216,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void HandleSokobanBlock(Collider sokobanCollider)
-    {
+    {        
         if (selectedBlock == null)
         {
             int hitLayer = Mathf.RoundToInt(sokobanCollider.transform.position.y);
@@ -224,12 +224,13 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(sokobanCollider.transform.position, transform.position))
             {
                 selectedBlock = sokobanCollider.gameObject;
+                selectedBlock.transform.GetChild(0).gameObject.SetActive(true);
                 isSokobanSelected = true;
                 sokobanBlockOffset = selectedBlock.transform.position - transform.position;
                 
             }
         }
-        else if (selectedBlock == sokobanCollider.gameObject)
+        else if (selectedBlock == sokobanCollider.gameObject && sokobanCollider.CompareTag("Sokoban"))
         {
       
             int hitLayer = Mathf.RoundToInt(selectedBlock.transform.position.y);
@@ -251,6 +252,7 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(MovePlayer());
                 currentLayer = hitLayer;
             }
+            selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
             selectedBlock = null;
             isSokobanSelected = false;
         }
@@ -260,6 +262,7 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(sokobanCollider.transform.position, transform.position))
             {
                 selectedBlock = sokobanCollider.gameObject;
+                selectedBlock.transform.GetChild(0).gameObject.SetActive(true);
                 isSokobanSelected = true;
                 sokobanBlockOffset = selectedBlock.transform.position - transform.position;
             }
@@ -272,8 +275,10 @@ public class PlayerController : MonoBehaviour
         if (isJumping == true)
         {
             animator.SetBool("IsJumping", true);
-            if(level == 1)
-            {
+
+            box.GetComponent<BoxScript>().SetActiveOnBoxLight(false);
+            if (level == 1)
+            {                
                 Vector3 currentRotation = player.transform.rotation.eulerAngles;
                 currentRotation.y -= 40f;
                 player.transform.rotation = Quaternion.Euler(currentRotation);
@@ -282,6 +287,8 @@ public class PlayerController : MonoBehaviour
         else if (isClimbing == true)
         {
             animator.SetBool("IsClimbing", true);
+
+            box.GetComponent<BoxScript>().SetActiveOnBoxLight(true);
             if (level == 1)
             {
                 Vector3 currentRotation = player.transform.rotation.eulerAngles;
@@ -317,6 +324,7 @@ public class PlayerController : MonoBehaviour
 
         if (selectedBlock != null)
         {
+            selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
             selectedBlock = null;
             if (level == 1)
             {
