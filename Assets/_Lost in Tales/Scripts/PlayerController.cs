@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
                                 HandleMovableBlock(hit.collider);
                                 
                             }
-                            else if (hit.collider.CompareTag("Sokoban") && currentLayer != 1)
+                            else if (hit.collider.CompareTag("Sokoban") && currentLayer != 1 || hit.collider.CompareTag("Pushable"))
                             {
                                 HandleSokobanBlock(hit.collider);
                                 box = hit.collider.gameObject;
@@ -105,15 +105,16 @@ public class PlayerController : MonoBehaviour
 
         foreach (var hit in hits)
         {
-            if (hit.CompareTag("Sokoban"))
+            if (hit.CompareTag("Sokoban")|| hit.CompareTag("Pushable"))
             {
                 hasSokobanOnSameTile = true;
                 break;
             }
         }
+
         
 
-        if (selectedBlock != null && selectedBlock.CompareTag("Sokoban"))
+        if (selectedBlock != null && selectedBlock.CompareTag("Sokoban") || selectedBlock != null && selectedBlock.CompareTag("Pushable"))
         {
             
             if (Mathf.Abs(hitLayer - currentLayer) <= maxLayerDifference)
@@ -166,7 +167,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             RaycastHit sokobanHit;
-            if (!Physics.Raycast(hitPosition, Vector3.up, out sokobanHit, 1.0f) || !sokobanHit.collider.CompareTag("Sokoban"))
+            if (!Physics.Raycast(hitPosition, Vector3.up, out sokobanHit, 1.0f) || !sokobanHit.collider.CompareTag("Sokoban") || !sokobanHit.collider.CompareTag("Pushable"))
             {
                 
                 if (Mathf.Abs(hitLayer - currentLayer) <= maxLayerDifference)
@@ -215,7 +216,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void HandleSokobanBlock(Collider sokobanCollider)
-    {
+    {        
         if (selectedBlock == null)
         {
             int hitLayer = Mathf.RoundToInt(sokobanCollider.transform.position.y);
@@ -229,7 +230,7 @@ public class PlayerController : MonoBehaviour
                 
             }
         }
-        else if (selectedBlock == sokobanCollider.gameObject)
+        else if (selectedBlock == sokobanCollider.gameObject && sokobanCollider.CompareTag("Sokoban"))
         {
       
             int hitLayer = Mathf.RoundToInt(selectedBlock.transform.position.y);
