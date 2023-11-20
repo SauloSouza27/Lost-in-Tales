@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     public int level;
 
+    private Vector3 initialPosition;
+
     public float moveSpeed = 1.0f;
     public float layerHeight = 1.0f;
 
@@ -15,6 +17,8 @@ public class PlayerController : MonoBehaviour
 
     public GameObject box;
 
+    private int targetLayer;
+
     private int currentLayer = 0;
 
     private GameObject selectedBlock;
@@ -23,6 +27,7 @@ public class PlayerController : MonoBehaviour
 
     private bool isJumping = false;
     private bool isClimbing = false;
+
 
     private Animator animator;
 
@@ -35,10 +40,12 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        initialPosition = transform.position;
     }
 
     private void Update()
     {
+        
         if (!isMoving)
         {
             if (Input.touchCount > 0)
@@ -59,7 +66,7 @@ public class PlayerController : MonoBehaviour
                                 HandleMovableBlock(hit.collider);
                                 
                             }
-                            else if (hit.collider.CompareTag("Sokoban") && currentLayer != 1 || hit.collider.CompareTag("Pushable"))
+                            else if (hit.collider.CompareTag("Sokoban") || hit.collider.CompareTag("Pushable"))
                             {
                                 HandleSokobanBlock(hit.collider);
                                 box = hit.collider.gameObject;
@@ -85,7 +92,7 @@ public class PlayerController : MonoBehaviour
 
         
 
-        if (selectedBlock != null && !collisionChecks)
+        if (selectedBlock != null && !collisionChecks && currentLayer != 1)
         {
             selectedBlock.transform.position = transform.position + sokobanBlockOffset;
                        
@@ -138,8 +145,9 @@ public class PlayerController : MonoBehaviour
                         {
                             isJumping = true;
                         }
+                        targetLayer = hitLayer;
                         StartCoroutine(MovePlayer());
-                        currentLayer = hitLayer;
+
                     }
                 }
                 else
@@ -191,8 +199,8 @@ public class PlayerController : MonoBehaviour
                             {
                                 isJumping = true;
                             }
+                            targetLayer = hitLayer;
                             StartCoroutine(MovePlayer());
-                            currentLayer = hitLayer;
                         }
                     }
                     else
@@ -216,7 +224,9 @@ public class PlayerController : MonoBehaviour
     }
 
     private void HandleSokobanBlock(Collider sokobanCollider)
-    {        
+    {
+        
+
         if (selectedBlock == null)
         {
             int hitLayer = Mathf.RoundToInt(sokobanCollider.transform.position.y);
@@ -224,9 +234,13 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(sokobanCollider.transform.position, transform.position))
             {
                 selectedBlock = sokobanCollider.gameObject;
+                
                 selectedBlock.transform.GetChild(0).gameObject.SetActive(true);
+                
                 isSokobanSelected = true;
                 sokobanBlockOffset = selectedBlock.transform.position - transform.position;
+                
+                
                 
             }
         }
@@ -234,6 +248,9 @@ public class PlayerController : MonoBehaviour
         {
       
             int hitLayer = Mathf.RoundToInt(selectedBlock.transform.position.y);
+
+            
+
             if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(selectedBlock.transform.position, transform.position))
             {
                 targetPosition = selectedBlock.transform.position + Vector3.up;
@@ -249,8 +266,8 @@ public class PlayerController : MonoBehaviour
                 {
                     isJumping = true;
                 }
+                targetLayer = hitLayer;
                 StartCoroutine(MovePlayer());
-                currentLayer = hitLayer;
             }
             selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
             selectedBlock = null;
@@ -262,7 +279,9 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(sokobanCollider.transform.position, transform.position))
             {
                 selectedBlock = sokobanCollider.gameObject;
-                selectedBlock.transform.GetChild(0).gameObject.SetActive(true);
+                
+                    selectedBlock.transform.GetChild(0).gameObject.SetActive(true);
+                
                 isSokobanSelected = true;
                 sokobanBlockOffset = selectedBlock.transform.position - transform.position;
             }
@@ -271,6 +290,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator MovePlayer()
     {
+        SetInitialPosition(transform.position);
         isMoving = true;
         if (isJumping == true)
         {
@@ -317,10 +337,12 @@ public class PlayerController : MonoBehaviour
         }
 
         isMoving = false;
+        currentLayer = targetLayer;
         animator.SetBool("IsJumping", false);
         animator.SetBool("IsClimbing", false);
         animator.SetBool("IsMoving", false);
         animator.SetBool("IsPushing", false);
+        
 
         if (selectedBlock != null)
         {
@@ -334,6 +356,11 @@ public class PlayerController : MonoBehaviour
             }
             isSokobanSelected = false;
             isClimbing = false;
+            currentLayer = targetLayer;
+            if(collisionChecks) 
+            {
+                transform.position = initialPosition;
+            }
             box.GetComponent<BoxScript>().collisionCheck = false;
             box.GetComponent<BoxScript>().SetInitialPosition(box.transform.position);
         }
@@ -346,6 +373,7 @@ public class PlayerController : MonoBehaviour
                 player.transform.rotation = Quaternion.Euler(currentRotation);
             }
             isJumping = false;
+            currentLayer = targetLayer;
         }
         if (isClimbing == true)
         {
@@ -356,6 +384,7 @@ public class PlayerController : MonoBehaviour
                 player.transform.rotation = Quaternion.Euler(currentRotation);
             }
             isClimbing = false;
+            currentLayer = targetLayer;
         }
 
     }
@@ -374,4 +403,10 @@ public class PlayerController : MonoBehaviour
         angle = Mathf.Round(angle / 90) * 90;
         targetRotation = Quaternion.Euler(0, angle, 0);
     }
+
+    public void SetInitialPosition(Vector3 actualPos)
+    {
+        initialPosition = actualPos;
+    }
+
 }
