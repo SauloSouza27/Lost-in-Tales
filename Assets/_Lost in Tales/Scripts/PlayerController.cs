@@ -45,7 +45,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        
         if (!isMoving)
         {
             if (Input.touchCount > 0)
@@ -112,16 +111,19 @@ public class PlayerController : MonoBehaviour
 
         foreach (var hit in hits)
         {
-            if (hit.CompareTag("Sokoban")|| hit.CompareTag("Pushable"))
+            if ((hit.CompareTag("Sokoban")|| hit.CompareTag("Pushable")) && hit.gameObject != selectedBlock)
             {
                 hasSokobanOnSameTile = true;
                 break;
             }
         }
 
+        Debug.Log(hasSokobanOnSameTile);
+
         
 
-        if (selectedBlock != null && selectedBlock.CompareTag("Sokoban") || selectedBlock != null && selectedBlock.CompareTag("Pushable"))
+        if ((selectedBlock != null && selectedBlock.CompareTag("Sokoban") && !hasSokobanOnSameTile) ||
+        (selectedBlock != null && selectedBlock.CompareTag("Pushable") && !hasSokobanOnSameTile))
         {
             
             if (Mathf.Abs(hitLayer - currentLayer) <= maxLayerDifference)
@@ -225,6 +227,8 @@ public class PlayerController : MonoBehaviour
 
     private void HandleSokobanBlock(Collider sokobanCollider)
     {
+
+        
         
 
         if (selectedBlock == null)

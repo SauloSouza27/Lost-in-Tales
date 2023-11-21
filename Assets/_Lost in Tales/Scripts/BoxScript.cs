@@ -83,6 +83,15 @@ public class BoxScript : MonoBehaviour
             transform.position = initialPosition;
         }
 
+         if (collision.CompareTag("Pushable"))
+        {
+            //If the GameObject's name matches the one you suggest, output this message in the console
+            Debug.Log("Do something here");
+            collisionCheck = true;
+            transform.position = initialPosition;
+        }
+
+
         // Visual Feedback
         if (collision.CompareTag("Player"))
         {
