@@ -107,23 +107,27 @@ public class PlayerController : MonoBehaviour
         int maxLayerDifference = 1;
 
         bool hasSokobanOnSameTile = false;
+        bool hasDiffSokobanOnSameTile = false;
         Collider[] hits = Physics.OverlapSphere(hitPosition, 0.1f);
 
         foreach (var hit in hits)
         {
-            if ((hit.CompareTag("Sokoban")|| hit.CompareTag("Pushable")) && hit.gameObject != selectedBlock)
+            if (hit.CompareTag("Sokoban")|| hit.CompareTag("Pushable"))
             {
                 hasSokobanOnSameTile = true;
+                if((hit.CompareTag("Sokoban")|| hit.CompareTag("Pushable")) && hit.gameObject != selectedBlock)
+                {
+                    hasDiffSokobanOnSameTile = true;
+                }
                 break;
             }
         }
-
-        Debug.Log(hasSokobanOnSameTile);
+        
 
         
 
-        if ((selectedBlock != null && selectedBlock.CompareTag("Sokoban") && !hasSokobanOnSameTile) ||
-        (selectedBlock != null && selectedBlock.CompareTag("Pushable") && !hasSokobanOnSameTile))
+        if ((selectedBlock != null && selectedBlock.CompareTag("Sokoban") && !hasDiffSokobanOnSameTile && currentLayer != 1) 
+        || (selectedBlock != null && selectedBlock.CompareTag("Pushable") && !hasDiffSokobanOnSameTile && currentLayer != 1))
         {
             
             if (Mathf.Abs(hitLayer - currentLayer) <= maxLayerDifference)
