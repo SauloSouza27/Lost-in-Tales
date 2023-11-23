@@ -69,6 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   feijao: {fileID: 0}
   peDeFeijao: {fileID: 8415549796934426797}
+  uiVictory: {fileID: 0}
   timeForSwitch: 1
 --- !u!1 &8415549796934426797
 GameObject:
@@ -122,7 +123,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
