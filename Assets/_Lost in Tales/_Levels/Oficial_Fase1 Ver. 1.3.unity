@@ -221,6 +221,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_corner (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1264594283477227498, guid: dea829c13f08a7b42b42cc86776d0b40, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6822034307000320470, guid: dea829c13f08a7b42b42cc86776d0b40, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.000002
@@ -323,6 +327,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4149541782271518101, guid: dd1e337b0732e4b478aad74446f8ae90, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -344,6 +352,10 @@ PrefabInstance:
     - target: {fileID: 1545007167273843402, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
       propertyPath: m_Name
       value: Button_corner_1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1545007167273843402, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2153831258251305898, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -536,6 +548,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (13)
@@ -831,6 +847,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8681301699740815463, guid: b321c4e36e1748a47b2e066eb5771fde, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -987,6 +1007,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_side_3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2613802416882406721, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5470580820784918741, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -1051,7 +1075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1219214086965125030, guid: 3a03aae36dd886f4eb0ac6369d9b9c62, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 2494939843112609093, guid: 3a03aae36dd886f4eb0ac6369d9b9c62, type: 3}
       propertyPath: m_ReceiveGI
@@ -1254,7 +1278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3356453002185520569, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 127
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 4578156032180840932, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
       propertyPath: m_CastShadows
@@ -1326,6 +1350,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (2)
@@ -1432,6 +1460,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8681301699740815463, guid: b321c4e36e1748a47b2e066eb5771fde, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1450,6 +1482,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (9)
@@ -1539,6 +1575,7 @@ Transform:
   - {fileID: 1961468686}
   - {fileID: 1661764016}
   - {fileID: 225816213}
+  - {fileID: 188259523}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &157429016
@@ -1549,6 +1586,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (20)
@@ -1740,6 +1781,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183995809}
   m_CullTransparentMesh: 1
+--- !u!1 &188259522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 188259523}
+  - component: {fileID: 188259524}
+  m_Layer: 9
+  m_Name: parede invisivel (6)
+  m_TagString: static
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &188259523
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188259522}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 130935740}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &188259524
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188259522}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 7.815588, y: 0.83235264, z: 2.1036863}
+  m_Center: {x: 0.43992138, y: -1.6112752, z: 6.5041986}
 --- !u!1 &205909946
 GameObject:
   m_ObjectHideFlags: 0
@@ -2272,6 +2366,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8681301699740815463, guid: b321c4e36e1748a47b2e066eb5771fde, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2293,6 +2391,10 @@ PrefabInstance:
     - target: {fileID: 1034330783510853237, guid: c3ece4cd5e1b334488113978d245b0c7, type: 3}
       propertyPath: m_Name
       value: Button_bothsides (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034330783510853237, guid: c3ece4cd5e1b334488113978d245b0c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8771622966603805674, guid: c3ece4cd5e1b334488113978d245b0c7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2504,7 +2606,7 @@ GameObject:
   m_TagString: static
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &225816213
 Transform:
@@ -2553,6 +2655,10 @@ PrefabInstance:
     - target: {fileID: 1264594283477227498, guid: dea829c13f08a7b42b42cc86776d0b40, type: 3}
       propertyPath: m_Name
       value: Button_corner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264594283477227498, guid: dea829c13f08a7b42b42cc86776d0b40, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6822034307000320470, guid: dea829c13f08a7b42b42cc86776d0b40, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2612,6 +2718,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (1)
@@ -2677,6 +2787,10 @@ PrefabInstance:
     - target: {fileID: 1545007167273843402, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
       propertyPath: m_Name
       value: Button_corner_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1545007167273843402, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2153831258251305898, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2864,6 +2978,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5642615455362350467, guid: 1ac29750d9825d340966f1ce2cf49843, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2925,6 +3043,10 @@ PrefabInstance:
     - target: {fileID: 3541425110462972027, guid: dd1e337b0732e4b478aad74446f8ae90, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149541782271518101, guid: dd1e337b0732e4b478aad74446f8ae90, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3102,6 +3224,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8681301699740815463, guid: b321c4e36e1748a47b2e066eb5771fde, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3190,6 +3316,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (15)
@@ -3379,6 +3509,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (12)
@@ -3702,6 +3836,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_side_3 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2613802416882406721, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5470580820784918741, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -3823,6 +3961,10 @@ PrefabInstance:
     - target: {fileID: 8461609083974220286, guid: efba1e30bed600549a1277acdfe5ac1c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8519260865034432832, guid: efba1e30bed600549a1277acdfe5ac1c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8616392499797084952, guid: efba1e30bed600549a1277acdfe5ac1c, type: 3}
       propertyPath: uiVictory
@@ -4007,7 +4149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8400934337037317308, guid: 37b8d5f3b45bbb245bfa80590f19c943, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 127
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4237,6 +4379,10 @@ PrefabInstance:
     - target: {fileID: 1228094645223065895, guid: 1ac29750d9825d340966f1ce2cf49843, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5642615455362350467, guid: 1ac29750d9825d340966f1ce2cf49843, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4589,6 +4735,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 327794087}
     m_Modifications:
+    - target: {fileID: 2002372472869940102, guid: 401a1c49fdb29f544b93f17facbd69bd, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2060541915965212228, guid: 401a1c49fdb29f544b93f17facbd69bd, type: 3}
       propertyPath: m_Name
       value: floor_attic_ladder
@@ -4694,6 +4844,10 @@ PrefabInstance:
     - target: {fileID: 3541425110462972027, guid: dd1e337b0732e4b478aad74446f8ae90, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149541782271518101, guid: dd1e337b0732e4b478aad74446f8ae90, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4953,7 +5107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8109920395803126941, guid: f3349a129fef7ec4fbe1a94882006289, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4979,7 +5133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1790765303141767236, guid: 8eda493f40c0dcd4a9fe8a1c8a42349a, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 2239380650994011840, guid: 8eda493f40c0dcd4a9fe8a1c8a42349a, type: 3}
       propertyPath: m_ReceiveGI
@@ -5252,6 +5406,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (18)
@@ -5474,6 +5632,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_bothsides (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1034330783510853237, guid: c3ece4cd5e1b334488113978d245b0c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8771622966603805674, guid: c3ece4cd5e1b334488113978d245b0c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -5542,7 +5704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6222066657607637231, guid: e80ac0acee83d4741abe5680f9dd5d9f, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 6720553313164359411, guid: e80ac0acee83d4741abe5680f9dd5d9f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5606,6 +5768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_corner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1264594283477227498, guid: dea829c13f08a7b42b42cc86776d0b40, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6822034307000320470, guid: dea829c13f08a7b42b42cc86776d0b40, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -5664,6 +5830,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (14)
@@ -5770,6 +5940,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8681301699740815463, guid: b321c4e36e1748a47b2e066eb5771fde, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5791,6 +5965,10 @@ PrefabInstance:
     - target: {fileID: 1034330783510853237, guid: c3ece4cd5e1b334488113978d245b0c7, type: 3}
       propertyPath: m_Name
       value: Button_bothsides (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034330783510853237, guid: c3ece4cd5e1b334488113978d245b0c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8771622966603805674, guid: c3ece4cd5e1b334488113978d245b0c7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5850,6 +6028,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center
@@ -5980,7 +6162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5061221639145153813, guid: 77dbcdeb4f5a47448bf3298db5019a9e, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 6311448530936051372, guid: 77dbcdeb4f5a47448bf3298db5019a9e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6490,7 +6672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3356453002185520569, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 127
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 4578156032180840932, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
       propertyPath: m_CastShadows
@@ -6562,6 +6744,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (4)
@@ -6893,6 +7079,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_corner_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1545007167273843402, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2153831258251305898, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17
@@ -7105,7 +7295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3356453002185520569, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 127
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 4578156032180840932, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
       propertyPath: m_CastShadows
@@ -7374,6 +7564,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_side_3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2613802416882406721, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5470580820784918741, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -7514,6 +7708,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4149541782271518101, guid: dd1e337b0732e4b478aad74446f8ae90, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7538,7 +7736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5294011526097981771, guid: 5efac0557005fdd47904a98d2929eb41, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 6475293502025611065, guid: 5efac0557005fdd47904a98d2929eb41, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7668,6 +7866,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_side_3 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2613802416882406721, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5470580820784918741, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.000004
@@ -7730,6 +7932,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_corner_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1545007167273843402, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2153831258251305898, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11
@@ -7788,6 +7994,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (8)
@@ -8071,6 +8281,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4149541782271518101, guid: dd1e337b0732e4b478aad74446f8ae90, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8210,6 +8424,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (10)
@@ -8466,6 +8684,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (6)
@@ -8572,6 +8794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_attic_cornerLB
       objectReference: {fileID: 0}
+    - target: {fileID: 6634492050567382205, guid: c014887693825044ea85a6a213522bbc, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8633,6 +8859,10 @@ PrefabInstance:
     - target: {fileID: 7587321047202913012, guid: b321c4e36e1748a47b2e066eb5771fde, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8681301699740815463, guid: b321c4e36e1748a47b2e066eb5771fde, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9141,6 +9371,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_side_3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2613802416882406721, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5470580820784918741, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -9457,6 +9691,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_corner_1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1545007167273843402, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2153831258251305898, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -9515,6 +9753,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (19)
@@ -9584,7 +9826,7 @@ GameObject:
   m_TagString: static
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1281305586
 Transform:
@@ -9720,6 +9962,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_side_3 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2613802416882406721, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5470580820784918741, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7
@@ -9848,6 +10094,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (16)
@@ -9946,6 +10196,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (3)
@@ -10011,6 +10265,10 @@ PrefabInstance:
     - target: {fileID: 1264594283477227498, guid: dea829c13f08a7b42b42cc86776d0b40, type: 3}
       propertyPath: m_Name
       value: Button_corner (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264594283477227498, guid: dea829c13f08a7b42b42cc86776d0b40, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6822034307000320470, guid: dea829c13f08a7b42b42cc86776d0b40, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10120,7 +10378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2775501532717725390, guid: 2801de479fc4846429874f250f4d29d2, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10146,7 +10404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1219214086965125030, guid: 3a03aae36dd886f4eb0ac6369d9b9c62, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 2494939843112609093, guid: 3a03aae36dd886f4eb0ac6369d9b9c62, type: 3}
       propertyPath: m_ReceiveGI
@@ -10254,6 +10512,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_attic_cornerRB
       objectReference: {fileID: 0}
+    - target: {fileID: 5967309435350999071, guid: 7e20397e61d035145b34a593d30ec36d, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10275,6 +10537,10 @@ PrefabInstance:
     - target: {fileID: 1545007167273843402, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
       propertyPath: m_Name
       value: Button_corner_1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1545007167273843402, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2153831258251305898, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10780,7 +11046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6778562815880743527, guid: db86095eb2c0e9447a40266c1fd6c49d, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10805,6 +11071,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1145784387}
     m_Modifications:
+    - target: {fileID: 454927206453154415, guid: bd2abd71ec7508849b7ddfc623aeee51, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 589671980038328238, guid: bd2abd71ec7508849b7ddfc623aeee51, type: 3}
       propertyPath: m_Name
       value: floor_attic_cornerRU
@@ -10929,6 +11199,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (7)
@@ -10991,6 +11265,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (5)
@@ -11053,6 +11331,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (17)
@@ -11154,6 +11436,10 @@ PrefabInstance:
     - target: {fileID: 519237665660700758, guid: cfe5bd524873dd346a88b6ab18bf04c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957717311297715039, guid: cfe5bd524873dd346a88b6ab18bf04c5, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7024974906245626626, guid: cfe5bd524873dd346a88b6ab18bf04c5, type: 3}
       propertyPath: m_Name
@@ -11276,7 +11562,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -11455,6 +11741,10 @@ PrefabInstance:
     - target: {fileID: 2613802416882406721, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
       propertyPath: m_Name
       value: Button_side_3 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613802416882406721, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5470580820784918741, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11976,7 +12266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1766707390196382490, guid: 4226ff88a80660c45b7383590ea812e5, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12039,6 +12329,10 @@ PrefabInstance:
     - target: {fileID: 2972386418971471248, guid: 894f601935de2fd4f85241c0efffff46, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649329019695847537, guid: 894f601935de2fd4f85241c0efffff46, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12154,6 +12448,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_side_3 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2613802416882406721, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5470580820784918741, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -12219,7 +12517,7 @@ GameObject:
   m_TagString: static
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1661764016
 Transform:
@@ -12309,6 +12607,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8681301699740815463, guid: b321c4e36e1748a47b2e066eb5771fde, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12333,7 +12635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6334955246985540866, guid: ead9735fde0bb2048b563bc50587a9db, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 7719588719818794479, guid: ead9735fde0bb2048b563bc50587a9db, type: 3}
       propertyPath: m_ReceiveGI
@@ -12985,6 +13287,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_corner (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1264594283477227498, guid: dea829c13f08a7b42b42cc86776d0b40, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6822034307000320470, guid: dea829c13f08a7b42b42cc86776d0b40, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.000002
@@ -13050,7 +13356,7 @@ GameObject:
   m_TagString: static
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1804987366
 Transform:
@@ -13419,6 +13725,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4149541782271518101, guid: dd1e337b0732e4b478aad74446f8ae90, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13443,7 +13753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1219214086965125030, guid: 3a03aae36dd886f4eb0ac6369d9b9c62, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 2494939843112609093, guid: 3a03aae36dd886f4eb0ac6369d9b9c62, type: 3}
       propertyPath: m_ReceiveGI
@@ -13708,6 +14018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_center (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1805183968283349669, guid: c51479f621948be47905d1ee85e77e80, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8329299482775168211, guid: c51479f621948be47905d1ee85e77e80, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -13772,7 +14086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3356453002185520569, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 127
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 4578156032180840932, guid: b67621d4647ce4547b9085d1622e93d7, type: 3}
       propertyPath: m_CastShadows
@@ -13848,6 +14162,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_side_3 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2613802416882406721, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5470580820784918741, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7
@@ -13913,7 +14231,7 @@ GameObject:
   m_TagString: static
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1924533618
 Transform:
@@ -14120,6 +14438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_corner_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1545007167273843402, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2153831258251305898, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -14319,7 +14641,7 @@ GameObject:
   m_TagString: static
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1961468686
 Transform:
@@ -14658,6 +14980,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5642615455362350467, guid: 1ac29750d9825d340966f1ce2cf49843, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14810,6 +15136,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 310164211}
     m_Modifications:
+    - target: {fileID: 2697885801309611118, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6548052162225354937, guid: 1e9c9efff6a841c48951c1c1bf1454de, type: 3}
       propertyPath: m_Name
       value: floor_attic_center (11)
@@ -15241,6 +15571,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3957717311297715039, guid: cfe5bd524873dd346a88b6ab18bf04c5, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7024974906245626626, guid: cfe5bd524873dd346a88b6ab18bf04c5, type: 3}
       propertyPath: m_Name
       value: floor_attic_sideL (1)
@@ -15595,6 +15929,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4149541782271518101, guid: dd1e337b0732e4b478aad74446f8ae90, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15652,6 +15990,10 @@ PrefabInstance:
     - target: {fileID: 519237665660700758, guid: cfe5bd524873dd346a88b6ab18bf04c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957717311297715039, guid: cfe5bd524873dd346a88b6ab18bf04c5, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7024974906245626626, guid: cfe5bd524873dd346a88b6ab18bf04c5, type: 3}
       propertyPath: m_Name
@@ -15980,6 +16322,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_bothsides
       objectReference: {fileID: 0}
+    - target: {fileID: 1034330783510853237, guid: c3ece4cd5e1b334488113978d245b0c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8771622966603805674, guid: c3ece4cd5e1b334488113978d245b0c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -16099,6 +16445,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_center
       objectReference: {fileID: 0}
+    - target: {fileID: 1805183968283349669, guid: c51479f621948be47905d1ee85e77e80, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8329299482775168211, guid: c51479f621948be47905d1ee85e77e80, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7
@@ -16160,6 +16510,10 @@ PrefabInstance:
     - target: {fileID: 1545007167273843402, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
       propertyPath: m_Name
       value: Button_corner_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1545007167273843402, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2153831258251305898, guid: 9ea48b4396246b049a7f3ffda56e4d4d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16318,6 +16672,10 @@ PrefabInstance:
     - target: {fileID: 2613802416882406721, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
       propertyPath: m_Name
       value: Button_side_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613802416882406721, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5470580820784918741, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
       propertyPath: m_LocalPosition.x
