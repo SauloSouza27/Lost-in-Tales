@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    
     public int level;
 
     private Vector3 initialPosition;
@@ -16,6 +17,9 @@ public class PlayerController : MonoBehaviour
     private bool isMoving = false;
 
     public GameObject box;
+
+    public GameObject climbButton;
+
 
     private int targetLayer;
 
@@ -76,6 +80,8 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+
+        
 
         if (box != null)
         {
@@ -231,16 +237,13 @@ public class PlayerController : MonoBehaviour
 
     private void HandleSokobanBlock(Collider sokobanCollider)
     {
-
-        
-        
-
         if (selectedBlock == null)
         {
             int hitLayer = Mathf.RoundToInt(sokobanCollider.transform.position.y);
 
             if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(sokobanCollider.transform.position, transform.position))
             {
+                climbButton.gameObject.SetActive(true);
                 selectedBlock = sokobanCollider.gameObject;
                 
                 selectedBlock.transform.GetChild(0).gameObject.SetActive(true);
@@ -261,6 +264,7 @@ public class PlayerController : MonoBehaviour
 
             if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(selectedBlock.transform.position, transform.position))
             {
+                
                 targetPosition = selectedBlock.transform.position + Vector3.up;
 
                 Vector3 direction = targetPosition - transform.position;
@@ -294,6 +298,45 @@ public class PlayerController : MonoBehaviour
                 sokobanBlockOffset = selectedBlock.transform.position - transform.position;
             }
         }
+    }
+
+    public void HandleClimbButton()
+    {
+        Debug.Log("hi");
+        if (selectedBlock.CompareTag("Sokoban"))
+        {
+      
+            int hitLayer = Mathf.RoundToInt(selectedBlock.transform.position.y);
+
+            
+
+            if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(selectedBlock.transform.position, transform.position))
+            {
+                
+                targetPosition = selectedBlock.transform.position + Vector3.up;
+
+                Vector3 direction = targetPosition - transform.position;
+                CalculateRotation(direction);
+
+
+                if (hitLayer == currentLayer + 1)
+                {
+                    isClimbing = true;
+                }
+                if (hitLayer == currentLayer - 1)
+                {
+                    isJumping = true;
+                }
+                targetLayer = hitLayer;
+                StartCoroutine(MovePlayer());
+            }
+            
+            selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
+            selectedBlock = null;
+            isSokobanSelected = false;
+            climbButton.gameObject.SetActive(false);
+        }
+
     }
 
     private IEnumerator MovePlayer()
