@@ -243,7 +243,11 @@ public class PlayerController : MonoBehaviour
 
             if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(sokobanCollider.transform.position, transform.position))
             {
-                climbButton.gameObject.SetActive(true);
+                if (sokobanCollider.CompareTag("Sokoban"))
+                {
+                    climbButton.gameObject.SetActive(true);
+                }
+                
                 selectedBlock = sokobanCollider.gameObject;
                 
                 selectedBlock.transform.GetChild(0).gameObject.SetActive(true);
@@ -255,12 +259,13 @@ public class PlayerController : MonoBehaviour
                 
             }
         }
-        else if (selectedBlock == sokobanCollider.gameObject && sokobanCollider.CompareTag("Sokoban"))
+        else if ((selectedBlock == sokobanCollider.gameObject && sokobanCollider.CompareTag("Sokoban"))|| (selectedBlock == sokobanCollider.gameObject && sokobanCollider.CompareTag("Pushable")))
         {
 
             selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
             selectedBlock = null;
             isSokobanSelected = false;
+            climbButton.gameObject.SetActive(false);
         }
         else
         {
