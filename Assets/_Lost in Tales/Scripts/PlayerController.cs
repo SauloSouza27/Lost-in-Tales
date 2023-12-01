@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     private Quaternion targetRotation;
     private bool isMoving = false;
 
-    public GameObject box;
+    private GameObject box;
 
     public GameObject climbButton;
 
@@ -257,30 +257,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (selectedBlock == sokobanCollider.gameObject && sokobanCollider.CompareTag("Sokoban"))
         {
-      
-            int hitLayer = Mathf.RoundToInt(selectedBlock.transform.position.y);
 
-            
-
-            if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(selectedBlock.transform.position, transform.position))
-            {
-                
-                targetPosition = selectedBlock.transform.position + Vector3.up;
-
-                Vector3 direction = targetPosition - transform.position;
-                CalculateRotation(direction);
-
-                if (hitLayer == currentLayer + 1)
-                {
-                    isClimbing = true;
-                }
-                if (hitLayer == currentLayer - 1)
-                {
-                    isJumping = true;
-                }
-                targetLayer = hitLayer;
-                StartCoroutine(MovePlayer());
-            }
             selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
             selectedBlock = null;
             isSokobanSelected = false;
@@ -397,15 +374,12 @@ public class PlayerController : MonoBehaviour
 
         if (selectedBlock != null)
         {
-            selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
-            selectedBlock = null;
             if (level == 1)
             {
                 Vector3 currentRotation = player.transform.rotation.eulerAngles;
                 currentRotation.y += 40f;
                 player.transform.rotation = Quaternion.Euler(currentRotation);
             }
-            isSokobanSelected = false;
             isClimbing = false;
             currentLayer = targetLayer;
             if(collisionChecks) 

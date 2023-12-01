@@ -14781,7 +14781,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PAUSE
+  m_text: CLIMB
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14808,7 +14808,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29
+  m_fontSize: 31.15
   m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -16168,7 +16168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &777230550
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16233,13 +16233,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: f64d68d60308004409bff03fcdb2d9f5, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1875488904}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: HandleClimbButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -22340,6 +22340,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8888440762527487716, guid: b9714e0c278296742bc8945fef63a11a, type: 3}
       propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 777230549}
+    - target: {fileID: 8888440762527487716, guid: b9714e0c278296742bc8945fef63a11a, type: 3}
+      propertyPath: climbButton
       value: 
       objectReference: {fileID: 777230549}
     - target: {fileID: 9082725271322157872, guid: b9714e0c278296742bc8945fef63a11a, type: 3}
@@ -37553,6 +37557,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dea829c13f08a7b42b42cc86776d0b40, type: 3}
+--- !u!114 &1875488904 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8888440762527487716, guid: b9714e0c278296742bc8945fef63a11a, type: 3}
+  m_PrefabInstance: {fileID: 1112211067}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62a86f2ad4edf864786e54edea8efb28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1877075544
 PrefabInstance:
   m_ObjectHideFlags: 0
