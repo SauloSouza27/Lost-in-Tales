@@ -71,11 +71,25 @@ public class PlayerController : MonoBehaviour
                             }
                             else if (hit.collider.CompareTag("Sokoban") || hit.collider.CompareTag("Pushable"))
                             {
-                                HandleSokobanBlock(hit.collider);
-                                box = hit.collider.gameObject;
-                                
+                                if((selectedBlock != null) && (selectedBlock.CompareTag("Sokoban") || selectedBlock.CompareTag("Pushable")) && (selectedBlock == hit.collider.gameObject))
+                                {
+                                    HandleMovableBlock(hit.collider);
+                                }
+                                else
+                                {
+                                    HandleSokobanBlock(hit.collider);
+                                    box = hit.collider.gameObject;
+                                }
+                            }
+
+                            else 
+                            {
+                                selectedBlock = null;
+                                isSokobanSelected = false;
+                                climbButton.gameObject.SetActive(false);
                             }
                         }
+                        
                     }
                 }
             }
@@ -138,32 +152,6 @@ public class PlayerController : MonoBehaviour
             
             if (Mathf.Abs(hitLayer - currentLayer) <= maxLayerDifference)
             {
-                if (hitLayer == currentLayer + 1 || hitLayer == currentLayer - 1)
-                {
-                    if (IsAdjacent(hitPosition, transform.position))
-                    {
-                        targetPosition = hitPosition + Vector3.up;
-
-                        CalculateRotation(direction);
-
-                        transform.rotation = targetRotation;
-
-
-                        if (hitLayer == currentLayer + 1)
-                        {
-                            isClimbing = true;
-                        }
-                        if (hitLayer == currentLayer - 1)
-                        {
-                            isJumping = true;
-                        }
-                        targetLayer = hitLayer;
-                        StartCoroutine(MovePlayer());
-
-                    }
-                }
-                else
-                {
                     hitPosition.y = transform.position.y;
 
                     if (IsAdjacent(hitPosition, transform.position))
@@ -176,7 +164,7 @@ public class PlayerController : MonoBehaviour
 
                         StartCoroutine(MovePlayer());
                     }
-                }
+                
             }
         }
         else if (hasSokobanOnSameTile)
@@ -261,7 +249,7 @@ public class PlayerController : MonoBehaviour
         }
         else if ((selectedBlock == sokobanCollider.gameObject && sokobanCollider.CompareTag("Sokoban"))|| (selectedBlock == sokobanCollider.gameObject && sokobanCollider.CompareTag("Pushable")))
         {
-
+            
             selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
             selectedBlock = null;
             isSokobanSelected = false;
