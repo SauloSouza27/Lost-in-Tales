@@ -84,9 +84,10 @@ public class PlayerController : MonoBehaviour
 
                             else 
                             {
+                                selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
                                 selectedBlock = null;
                                 isSokobanSelected = false;
-                                climbButton.gameObject.SetActive(false);
+                                climbButton.gameObject.SetActive(false);                                
                             }
                         }
                         
