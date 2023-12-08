@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    
     public int level;
+
+    private Vector3 initialPosition;
 
     public float moveSpeed = 1.0f;
     public float layerHeight = 1.0f;
@@ -13,7 +16,12 @@ public class PlayerController : MonoBehaviour
     private Quaternion targetRotation;
     private bool isMoving = false;
 
-    public GameObject box;
+    private GameObject box;
+
+    public GameObject climbButton;
+
+
+    private int targetLayer;
 
     private int currentLayer = 0;
 
@@ -23,6 +31,7 @@ public class PlayerController : MonoBehaviour
 
     private bool isJumping = false;
     private bool isClimbing = false;
+
 
     private Animator animator;
 
@@ -35,6 +44,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        initialPosition = transform.position;
     }
 
     private void Update()
@@ -59,17 +69,34 @@ public class PlayerController : MonoBehaviour
                                 HandleMovableBlock(hit.collider);
                                 
                             }
-                            else if (hit.collider.CompareTag("Sokoban") && currentLayer != 1 || hit.collider.CompareTag("Pushable"))
+                            else if (hit.collider.CompareTag("Sokoban") || hit.collider.CompareTag("Pushable"))
                             {
-                                HandleSokobanBlock(hit.collider);
-                                box = hit.collider.gameObject;
-                                
+                                if((selectedBlock != null) && (selectedBlock.CompareTag("Sokoban") || selectedBlock.CompareTag("Pushable")) && (selectedBlock == hit.collider.gameObject))
+                                {
+                                    HandleMovableBlock(hit.collider);
+                                }
+                                else
+                                {
+                                    HandleSokobanBlock(hit.collider);
+                                    box = hit.collider.gameObject;
+                                }
+                            }
+
+                            else 
+                            {
+                                selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
+                                selectedBlock = null;
+                                isSokobanSelected = false;
+                                climbButton.gameObject.SetActive(false);                                
                             }
                         }
+                        
                     }
                 }
             }
         }
+
+        
 
         if (box != null)
         {
@@ -85,7 +112,7 @@ public class PlayerController : MonoBehaviour
 
         
 
-        if (selectedBlock != null && !collisionChecks)
+        if (selectedBlock != null && !collisionChecks && currentLayer != 1)
         {
             selectedBlock.transform.position = transform.position + sokobanBlockOffset;
                        
@@ -101,6 +128,7 @@ public class PlayerController : MonoBehaviour
         int maxLayerDifference = 1;
 
         bool hasSokobanOnSameTile = false;
+        bool hasDiffSokobanOnSameTile = false;
         Collider[] hits = Physics.OverlapSphere(hitPosition, 0.1f);
 
         foreach (var hit in hits)
@@ -108,42 +136,23 @@ public class PlayerController : MonoBehaviour
             if (hit.CompareTag("Sokoban")|| hit.CompareTag("Pushable"))
             {
                 hasSokobanOnSameTile = true;
+                if((hit.CompareTag("Sokoban")|| hit.CompareTag("Pushable")) && hit.gameObject != selectedBlock)
+                {
+                    hasDiffSokobanOnSameTile = true;
+                }
                 break;
             }
         }
+        
 
         
 
-        if (selectedBlock != null && selectedBlock.CompareTag("Sokoban") || selectedBlock != null && selectedBlock.CompareTag("Pushable"))
+        if ((selectedBlock != null && selectedBlock.CompareTag("Sokoban") && !hasDiffSokobanOnSameTile && currentLayer != 1) 
+        || (selectedBlock != null && selectedBlock.CompareTag("Pushable") && !hasDiffSokobanOnSameTile && currentLayer != 1))
         {
             
             if (Mathf.Abs(hitLayer - currentLayer) <= maxLayerDifference)
             {
-                if (hitLayer == currentLayer + 1 || hitLayer == currentLayer - 1)
-                {
-                    if (IsAdjacent(hitPosition, transform.position))
-                    {
-                        targetPosition = hitPosition + Vector3.up;
-
-                        CalculateRotation(direction);
-
-                        transform.rotation = targetRotation;
-
-
-                        if (hitLayer == currentLayer + 1)
-                        {
-                            isClimbing = true;
-                        }
-                        if (hitLayer == currentLayer - 1)
-                        {
-                            isJumping = true;
-                        }
-                        StartCoroutine(MovePlayer());
-                        currentLayer = hitLayer;
-                    }
-                }
-                else
-                {
                     hitPosition.y = transform.position.y;
 
                     if (IsAdjacent(hitPosition, transform.position))
@@ -156,7 +165,7 @@ public class PlayerController : MonoBehaviour
 
                         StartCoroutine(MovePlayer());
                     }
-                }
+                
             }
         }
         else if (hasSokobanOnSameTile)
@@ -191,8 +200,8 @@ public class PlayerController : MonoBehaviour
                             {
                                 isJumping = true;
                             }
+                            targetLayer = hitLayer;
                             StartCoroutine(MovePlayer());
-                            currentLayer = hitLayer;
                         }
                     }
                     else
@@ -216,30 +225,70 @@ public class PlayerController : MonoBehaviour
     }
 
     private void HandleSokobanBlock(Collider sokobanCollider)
-    {        
+    {
         if (selectedBlock == null)
         {
             int hitLayer = Mathf.RoundToInt(sokobanCollider.transform.position.y);
 
             if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(sokobanCollider.transform.position, transform.position))
             {
+                if (sokobanCollider.CompareTag("Sokoban"))
+                {
+                    climbButton.gameObject.SetActive(true);
+                }
+                
                 selectedBlock = sokobanCollider.gameObject;
+                
                 selectedBlock.transform.GetChild(0).gameObject.SetActive(true);
+                
                 isSokobanSelected = true;
                 sokobanBlockOffset = selectedBlock.transform.position - transform.position;
                 
+                
+                
             }
         }
-        else if (selectedBlock == sokobanCollider.gameObject && sokobanCollider.CompareTag("Sokoban"))
+        else if ((selectedBlock == sokobanCollider.gameObject && sokobanCollider.CompareTag("Sokoban"))|| (selectedBlock == sokobanCollider.gameObject && sokobanCollider.CompareTag("Pushable")))
+        {
+            
+            selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
+            selectedBlock = null;
+            isSokobanSelected = false;
+            climbButton.gameObject.SetActive(false);
+        }
+        else
+        {
+            int hitLayer = Mathf.RoundToInt(sokobanCollider.transform.position.y);
+            if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(sokobanCollider.transform.position, transform.position))
+            {
+                selectedBlock = sokobanCollider.gameObject;
+                
+                    selectedBlock.transform.GetChild(0).gameObject.SetActive(true);
+                
+                isSokobanSelected = true;
+                sokobanBlockOffset = selectedBlock.transform.position - transform.position;
+            }
+        }
+    }
+
+    public void HandleClimbButton()
+    {
+        Debug.Log("hi");
+        if (selectedBlock.CompareTag("Sokoban"))
         {
       
             int hitLayer = Mathf.RoundToInt(selectedBlock.transform.position.y);
+
+            
+
             if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(selectedBlock.transform.position, transform.position))
             {
+                
                 targetPosition = selectedBlock.transform.position + Vector3.up;
 
                 Vector3 direction = targetPosition - transform.position;
                 CalculateRotation(direction);
+
 
                 if (hitLayer == currentLayer + 1)
                 {
@@ -249,28 +298,21 @@ public class PlayerController : MonoBehaviour
                 {
                     isJumping = true;
                 }
+                targetLayer = hitLayer;
                 StartCoroutine(MovePlayer());
-                currentLayer = hitLayer;
             }
+            
             selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
             selectedBlock = null;
             isSokobanSelected = false;
+            climbButton.gameObject.SetActive(false);
         }
-        else
-        {
-            int hitLayer = Mathf.RoundToInt(sokobanCollider.transform.position.y);
-            if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(sokobanCollider.transform.position, transform.position))
-            {
-                selectedBlock = sokobanCollider.gameObject;
-                selectedBlock.transform.GetChild(0).gameObject.SetActive(true);
-                isSokobanSelected = true;
-                sokobanBlockOffset = selectedBlock.transform.position - transform.position;
-            }
-        }
+
     }
 
     private IEnumerator MovePlayer()
     {
+        SetInitialPosition(transform.position);
         isMoving = true;
         if (isJumping == true)
         {
@@ -317,23 +359,27 @@ public class PlayerController : MonoBehaviour
         }
 
         isMoving = false;
+        currentLayer = targetLayer;
         animator.SetBool("IsJumping", false);
         animator.SetBool("IsClimbing", false);
         animator.SetBool("IsMoving", false);
         animator.SetBool("IsPushing", false);
+        
 
         if (selectedBlock != null)
         {
-            selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
-            selectedBlock = null;
             if (level == 1)
             {
                 Vector3 currentRotation = player.transform.rotation.eulerAngles;
                 currentRotation.y += 40f;
                 player.transform.rotation = Quaternion.Euler(currentRotation);
             }
-            isSokobanSelected = false;
             isClimbing = false;
+            currentLayer = targetLayer;
+            if(collisionChecks) 
+            {
+                transform.position = initialPosition;
+            }
             box.GetComponent<BoxScript>().collisionCheck = false;
             box.GetComponent<BoxScript>().SetInitialPosition(box.transform.position);
         }
@@ -346,6 +392,7 @@ public class PlayerController : MonoBehaviour
                 player.transform.rotation = Quaternion.Euler(currentRotation);
             }
             isJumping = false;
+            currentLayer = targetLayer;
         }
         if (isClimbing == true)
         {
@@ -356,6 +403,7 @@ public class PlayerController : MonoBehaviour
                 player.transform.rotation = Quaternion.Euler(currentRotation);
             }
             isClimbing = false;
+            currentLayer = targetLayer;
         }
 
     }
@@ -374,4 +422,10 @@ public class PlayerController : MonoBehaviour
         angle = Mathf.Round(angle / 90) * 90;
         targetRotation = Quaternion.Euler(0, angle, 0);
     }
+
+    public void SetInitialPosition(Vector3 actualPos)
+    {
+        initialPosition = actualPos;
+    }
+
 }
