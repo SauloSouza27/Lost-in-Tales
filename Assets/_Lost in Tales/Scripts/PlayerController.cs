@@ -84,6 +84,14 @@ public class PlayerController : MonoBehaviour
 
                             else 
                             {
+                                if(currentLayer == 0)
+                                {
+                                    animator.SetBool("IsHolding", false);
+                                    if (level == 1 && selectedBlock != null)
+                                    {
+                                        player.transform.eulerAngles = new Vector3(player.transform.eulerAngles.x, player.transform.eulerAngles.y + 40, player.transform.eulerAngles.z);
+                                    }
+                                }
                                 selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
                                 selectedBlock = null;
                                 isSokobanSelected = false;
@@ -238,7 +246,16 @@ public class PlayerController : MonoBehaviour
                 }
                 
                 selectedBlock = sokobanCollider.gameObject;
-                
+                if (currentLayer == 0)
+                {
+                    animator.SetBool("IsHolding", true);
+                    if (level == 1)
+                    {
+                        Vector3 currentRotation = player.transform.rotation.eulerAngles;
+                        currentRotation.y -= 40f;
+                        player.transform.rotation = Quaternion.Euler(currentRotation);
+                    }
+                }
                 selectedBlock.transform.GetChild(0).gameObject.SetActive(true);
                 
                 isSokobanSelected = true;
@@ -249,8 +266,17 @@ public class PlayerController : MonoBehaviour
             }
         }
         else if ((selectedBlock == sokobanCollider.gameObject && sokobanCollider.CompareTag("Sokoban"))|| (selectedBlock == sokobanCollider.gameObject && sokobanCollider.CompareTag("Pushable")))
-        {
-            
+        { 
+            if(currentLayer == 0)
+            {
+                animator.SetBool("IsHolding", false);
+                if (level == 1)
+                {
+                    Vector3 currentRotation = player.transform.rotation.eulerAngles;
+                    currentRotation.y += 40f;
+                    player.transform.rotation = Quaternion.Euler(currentRotation);
+                }
+            }
             selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
             selectedBlock = null;
             isSokobanSelected = false;
@@ -262,8 +288,18 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(hitLayer - currentLayer) <= 1 && IsAdjacent(sokobanCollider.transform.position, transform.position))
             {
                 selectedBlock = sokobanCollider.gameObject;
-                
-                    selectedBlock.transform.GetChild(0).gameObject.SetActive(true);
+
+                if(currentLayer == 0)
+                {
+                    animator.SetBool("IsHolding", true);
+                    if (level == 1)
+                    {
+                        Vector3 currentRotation = player.transform.rotation.eulerAngles;
+                        currentRotation.y -= 40f;
+                        player.transform.rotation = Quaternion.Euler(currentRotation);
+                    }
+                }
+                selectedBlock.transform.GetChild(0).gameObject.SetActive(true);
                 
                 isSokobanSelected = true;
                 sokobanBlockOffset = selectedBlock.transform.position - transform.position;
@@ -298,10 +334,22 @@ public class PlayerController : MonoBehaviour
                 {
                     isJumping = true;
                 }
+                if (currentLayer == 1)
+                {
+                    isJumping = true;
+                }
                 targetLayer = hitLayer;
                 StartCoroutine(MovePlayer());
             }
-            
+            if (currentLayer == 0)
+            {
+                if (level == 1)
+                {
+                    Vector3 currentRotation = player.transform.rotation.eulerAngles;
+                    currentRotation.y += 40f;
+                    player.transform.rotation = Quaternion.Euler(currentRotation);
+                }
+            }
             selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
             selectedBlock = null;
             isSokobanSelected = false;
@@ -317,36 +365,28 @@ public class PlayerController : MonoBehaviour
         if (isJumping == true)
         {
             animator.SetBool("IsJumping", true);
-
-            box.GetComponent<BoxScript>().SetActiveOnBoxLight(false);
             if (level == 1)
-            {                
+            {
                 Vector3 currentRotation = player.transform.rotation.eulerAngles;
                 currentRotation.y -= 40f;
                 player.transform.rotation = Quaternion.Euler(currentRotation);
             }
+            box.GetComponent<BoxScript>().SetActiveOnBoxLight(false);
         }
         else if (isClimbing == true)
         {
             animator.SetBool("IsClimbing", true);
-
-            box.GetComponent<BoxScript>().SetActiveOnBoxLight(true);
             if (level == 1)
             {
                 Vector3 currentRotation = player.transform.rotation.eulerAngles;
                 currentRotation.y -= 40f;
                 player.transform.rotation = Quaternion.Euler(currentRotation);
             }
+            box.GetComponent<BoxScript>().SetActiveOnBoxLight(true);
         }
         else if (isSokobanSelected == true)
         {
             animator.SetBool("IsPushing", true);
-            if(level == 1)
-            {
-                Vector3 currentRotation = player.transform.rotation.eulerAngles;
-                currentRotation.y -= 40f;
-                player.transform.rotation = Quaternion.Euler(currentRotation);
-            }
         }
         else
         {
@@ -364,16 +404,10 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsClimbing", false);
         animator.SetBool("IsMoving", false);
         animator.SetBool("IsPushing", false);
-        
+
 
         if (selectedBlock != null)
         {
-            if (level == 1)
-            {
-                Vector3 currentRotation = player.transform.rotation.eulerAngles;
-                currentRotation.y += 40f;
-                player.transform.rotation = Quaternion.Euler(currentRotation);
-            }
             isClimbing = false;
             currentLayer = targetLayer;
             if(collisionChecks) 
@@ -396,6 +430,7 @@ public class PlayerController : MonoBehaviour
         }
         if (isClimbing == true)
         {
+            animator.SetBool("IsHolding", false);
             if (level == 1)
             {
                 Vector3 currentRotation = player.transform.rotation.eulerAngles;
