@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 421.00006}
+  m_AnchoredPosition: {x: -199, y: 65}
   m_SizeDelta: {x: 1353.0032, y: 219.75073}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &16665131
@@ -180,7 +180,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lost in Tales
+  m_text: 'Lost
+
+    in
+
+    Tales'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 66d58e3b73cad334ea59757e40f5cbf1, type: 2}
   m_sharedMaterial: {fileID: 2415478078408484278, guid: 66d58e3b73cad334ea59757e40f5cbf1, type: 2}
