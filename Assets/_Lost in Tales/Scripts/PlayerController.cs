@@ -92,10 +92,13 @@ public class PlayerController : MonoBehaviour
                                         player.transform.eulerAngles = new Vector3(player.transform.eulerAngles.x, player.transform.eulerAngles.y + 40, player.transform.eulerAngles.z);
                                     }
                                 }
-                                selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
-                                selectedBlock = null;
-                                isSokobanSelected = false;
-                                climbButton.gameObject.SetActive(false);                                
+                                if(selectedBlock != null)
+                                {
+                                    selectedBlock.transform.GetChild(0).gameObject.SetActive(false);
+                                    selectedBlock = null;
+                                    isSokobanSelected = false;
+                                    climbButton.gameObject.SetActive(false);
+                                }                                
                             }
                         }
                         
@@ -309,7 +312,6 @@ public class PlayerController : MonoBehaviour
 
     public void HandleClimbButton()
     {
-        Debug.Log("hi");
         if (selectedBlock.CompareTag("Sokoban"))
         {
       
