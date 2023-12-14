@@ -582,6 +582,11 @@ MonoBehaviour:
   openCage: {fileID: 919523956}
   closedCage: {fileID: 208049546}
   goldenChicken: {fileID: 90854031}
+  totems:
+  - {fileID: 1578520863}
+  - {fileID: 1324930248}
+  - {fileID: 1380711061}
+  - {fileID: 1958310927}
 --- !u!1001 &75043212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13467,6 +13472,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5470580820784918741, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
   m_PrefabInstance: {fileID: 1321867821}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1324930248 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3068480686896321525, guid: e6de30b29ca638d4494124265bfad5a0, type: 3}
+  m_PrefabInstance: {fileID: 2685324872989596489}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1330325459
 GameObject:
   m_ObjectHideFlags: 0
@@ -14399,6 +14409,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5470580820784918741, guid: 645752f23dee8fa4eb0f5cc63a366a19, type: 3}
   m_PrefabInstance: {fileID: 1380447004}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1380711061 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7696445283183644615, guid: f38791cb1f65b744690660cbf2800df0, type: 3}
+  m_PrefabInstance: {fileID: 8559930584723885211}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1389582270
 PrefabInstance:
@@ -17082,6 +17097,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575804586}
   m_CullTransparentMesh: 1
+--- !u!1 &1578520863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8708058804092766693, guid: f799b87108aac8e4790394edafcd6052, type: 3}
+  m_PrefabInstance: {fileID: 2546539013374722048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1578763917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20594,6 +20614,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8329299482775168211, guid: c51479f621948be47905d1ee85e77e80, type: 3}
   m_PrefabInstance: {fileID: 1951042711}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1958310927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5592093464639652323, guid: c4d776a659e63a342bb5eff84cda5672, type: 3}
+  m_PrefabInstance: {fileID: 151636310893587147}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1982940474
 PrefabInstance:

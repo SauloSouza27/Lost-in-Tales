@@ -6,7 +6,9 @@ public class ControladorGaiola : MonoBehaviour
 {
     [SerializeField] private GameObject openCage, closedCage, goldenChicken;
 
-    private bool redIsCorrect = false, blueIsCorrect = false, greenIsCorrect = false, purpleIsCorrect = false;
+    [SerializeField] private GameObject[] totems;
+
+    private bool redIsCorrect = false, blueIsCorrect = false, greenIsCorrect = false, purpleIsCorrect = false, cageIsClosed = true;
 
     public void SetTrueIfColorIsCorrect(string pathColor)
     {
@@ -48,11 +50,30 @@ public class ControladorGaiola : MonoBehaviour
         }
     }
 
+    private void OpenCage()
+    {
+        closedCage.SetActive(false);
+        openCage.SetActive(true);
+
+        foreach (GameObject totem in totems)
+        {
+            totem.GetComponent<BoxCollider>().enabled = false;
+        }
+
+        goldenChicken.GetComponent<BoxCollider>().enabled = true;
+
+        cageIsClosed = false;
+    }
+
     private void Update()
     {
-        Debug.Log("Red"+redIsCorrect);
-        Debug.Log("Blue"+blueIsCorrect);
-        Debug.Log("Green"+greenIsCorrect);
-        Debug.Log("Purple"+purpleIsCorrect);
+        if(redIsCorrect && blueIsCorrect && greenIsCorrect && purpleIsCorrect)
+        {
+            if (cageIsClosed)
+            {
+                OpenCage();
+            }
+        }
     }
+ 
 }
