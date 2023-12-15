@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ControladorGaiola : MonoBehaviour
 {
-    [SerializeField] private GameObject openCage, closedCage, goldenChicken;
+    [SerializeField] private GameObject openCage, closedCage, goldenChicken, uiVictory;
 
     [SerializeField] private GameObject[] totems;
 
@@ -62,7 +62,16 @@ public class ControladorGaiola : MonoBehaviour
 
         goldenChicken.GetComponent<BoxCollider>().enabled = true;
 
+        StartCoroutine(SetVictoryMenu());
+
         cageIsClosed = false;
+    }
+
+    private IEnumerator SetVictoryMenu()
+    {
+        yield return new WaitForSeconds(2.0f);
+        uiVictory.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     private void Update()
