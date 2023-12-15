@@ -10,23 +10,6 @@ public class ControladorGaiola : MonoBehaviour
 
     private bool redIsCorrect = false, blueIsCorrect = false, greenIsCorrect = false, purpleIsCorrect = false, cageIsClosed = true;
 
-    private void Update()
-    {
-        if (redIsCorrect && blueIsCorrect && greenIsCorrect && purpleIsCorrect)
-        {
-            if (cageIsClosed)
-            {
-                OpenCage();
-            }
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        StartCoroutine(SetVictoryMenu());
-        Debug.Log("HA");
-    }
-
     public void SetTrueIfColorIsCorrect(string pathColor)
     {
         if(pathColor == "Red")
@@ -79,13 +62,27 @@ public class ControladorGaiola : MonoBehaviour
 
         goldenChicken.GetComponent<BoxCollider>().enabled = true;
 
+        StartCoroutine(SetVictoryMenu());
+
         cageIsClosed = false;
     }
 
     private IEnumerator SetVictoryMenu()
     {
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(2.0f);
         uiVictory.SetActive(true);
         Time.timeScale = 0f;
-    } 
+    }
+
+    private void Update()
+    {
+        if(redIsCorrect && blueIsCorrect && greenIsCorrect && purpleIsCorrect)
+        {
+            if (cageIsClosed)
+            {
+                OpenCage();
+            }
+        }
+    }
+ 
 }
