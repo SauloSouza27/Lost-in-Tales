@@ -186,8 +186,8 @@ MonoBehaviour:
 
     Tales'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 66d58e3b73cad334ea59757e40f5cbf1, type: 2}
-  m_sharedMaterial: {fileID: 2415478078408484278, guid: 66d58e3b73cad334ea59757e40f5cbf1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 26608852121468c419e2372f3869ab02, type: 2}
+  m_sharedMaterial: {fileID: 2415478078408484278, guid: 26608852121468c419e2372f3869ab02, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -608,8 +608,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Exit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6437425cbd5b26b4fb60d9db05f1b07f, type: 2}
-  m_sharedMaterial: {fileID: 2415478078408484278, guid: 6437425cbd5b26b4fb60d9db05f1b07f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 26608852121468c419e2372f3869ab02, type: 2}
+  m_sharedMaterial: {fileID: 2415478078408484278, guid: 26608852121468c419e2372f3869ab02, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1025,8 +1025,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Play
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6437425cbd5b26b4fb60d9db05f1b07f, type: 2}
-  m_sharedMaterial: {fileID: 2415478078408484278, guid: 6437425cbd5b26b4fb60d9db05f1b07f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 26608852121468c419e2372f3869ab02, type: 2}
+  m_sharedMaterial: {fileID: 2415478078408484278, guid: 26608852121468c419e2372f3869ab02, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1602,8 +1602,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6437425cbd5b26b4fb60d9db05f1b07f, type: 2}
-  m_sharedMaterial: {fileID: 2415478078408484278, guid: 6437425cbd5b26b4fb60d9db05f1b07f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 26608852121468c419e2372f3869ab02, type: 2}
+  m_sharedMaterial: {fileID: 2415478078408484278, guid: 26608852121468c419e2372f3869ab02, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
