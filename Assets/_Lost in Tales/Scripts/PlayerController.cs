@@ -312,7 +312,7 @@ public class PlayerController : MonoBehaviour
 
     public void HandleClimbButton()
     {
-        if (selectedBlock.CompareTag("Sokoban"))
+        if (selectedBlock.CompareTag("Sokoban")&&isMoving == false)
         {
       
             int hitLayer = Mathf.RoundToInt(selectedBlock.transform.position.y);
