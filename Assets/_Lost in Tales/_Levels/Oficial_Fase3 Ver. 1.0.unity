@@ -18167,6 +18167,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Pushable
       objectReference: {fileID: 0}
+    - target: {fileID: 3220052851270283526, guid: e6de30b29ca638d4494124265bfad5a0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220052851270283526, guid: e6de30b29ca638d4494124265bfad5a0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220052851270283526, guid: e6de30b29ca638d4494124265bfad5a0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6547980252273597401, guid: e6de30b29ca638d4494124265bfad5a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
