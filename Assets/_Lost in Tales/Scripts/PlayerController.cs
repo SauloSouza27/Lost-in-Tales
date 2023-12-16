@@ -373,7 +373,6 @@ public class PlayerController : MonoBehaviour
                 currentRotation.y -= 40f;
                 player.transform.rotation = Quaternion.Euler(currentRotation);
             }
-            box.GetComponent<BoxScript>().SetActiveOnBoxLight(false);
         }
         else if (isClimbing == true)
         {
@@ -384,7 +383,6 @@ public class PlayerController : MonoBehaviour
                 currentRotation.y -= 40f;
                 player.transform.rotation = Quaternion.Euler(currentRotation);
             }
-            box.GetComponent<BoxScript>().SetActiveOnBoxLight(true);
         }
         else if (isSokobanSelected == true)
         {

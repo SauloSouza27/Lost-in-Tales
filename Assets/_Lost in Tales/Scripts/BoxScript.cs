@@ -122,16 +122,4 @@ public class BoxScript : MonoBehaviour
         initialPosition = actualPos;
     }
 
-    public void SetActiveOnBoxLight(bool active)
-    {
-        t = 0f;
-        if (active)
-        {
-            onBoxLight.enabled = true;
-        }
-        else
-        {
-            onBoxLight.enabled = false;
-        }
-    }
 }
