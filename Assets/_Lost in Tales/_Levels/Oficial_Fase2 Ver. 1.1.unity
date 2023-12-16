@@ -32903,8 +32903,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeMixer: {fileID: 24100000, guid: 46578639e95aa3241aaf6514dfd5abf8, type: 2}
-  musicSlider: {fileID: 0}
-  sfxSlider: {fileID: 0}
+  musicSlider: {fileID: 1803426502}
+  sfxSlider: {fileID: 77451366}
 --- !u!4 &1557779257 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1737898043070937579, guid: 9e1b199272aaaba45a6eb02af3889b44, type: 3}
