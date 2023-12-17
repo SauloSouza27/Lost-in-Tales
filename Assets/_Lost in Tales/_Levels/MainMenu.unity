@@ -1262,6 +1262,7 @@ GameObject:
   - component: {fileID: 704505628}
   - component: {fileID: 704505627}
   - component: {fileID: 704505626}
+  - component: {fileID: 704505633}
   - component: {fileID: 704505630}
   - component: {fileID: 704505631}
   - component: {fileID: 704505632}
@@ -1481,6 +1482,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &704505633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704505625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5356ea27721007349b5c2e5659fbfaff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &716226613
 GameObject:
   m_ObjectHideFlags: 0
@@ -3439,6 +3452,18 @@ MonoBehaviour:
       - m_Target: {fileID: 704505630}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: OnCreditsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 704505633}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
