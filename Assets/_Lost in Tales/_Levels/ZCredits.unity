@@ -393,6 +393,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1093989998}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1093989998}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: OnMenuButton
         m_Mode: 1
         m_Arguments:
@@ -809,8 +821,8 @@ RectTransform:
   - {fileID: 1207521752}
   - {fileID: 22402385}
   - {fileID: 1997270025}
-  - {fileID: 162172363}
   - {fileID: 1270982287}
+  - {fileID: 162172363}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
