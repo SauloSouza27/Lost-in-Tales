@@ -33,7 +33,7 @@ public class IntroLogoPUC : MonoBehaviour
     private void CarregaCena(string nomeCena)
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(nomeCena);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private IEnumerator FadeIn()
