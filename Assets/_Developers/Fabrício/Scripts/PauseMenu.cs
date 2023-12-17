@@ -19,7 +19,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void OnMenuButton () {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
     public void OnExitButton () {
