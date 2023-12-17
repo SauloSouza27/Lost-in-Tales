@@ -492,7 +492,7 @@ MonoBehaviour:
   openCage: {fileID: 919523956}
   closedCage: {fileID: 208049546}
   goldenChicken: {fileID: 90854031}
-  uiVictory: {fileID: 0}
+  uiVictory: {fileID: 81267659}
   totems:
   - {fileID: 1578520863}
   - {fileID: 1324930248}

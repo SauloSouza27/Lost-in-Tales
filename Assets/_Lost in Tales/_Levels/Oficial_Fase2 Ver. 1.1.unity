@@ -49506,7 +49506,7 @@ PrefabInstance:
     - target: {fileID: 7286551682773627443, guid: 3088686ab49d56d4b97f4d07fa3fcbbf, type: 3}
       propertyPath: uiVictory
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1079647936}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
