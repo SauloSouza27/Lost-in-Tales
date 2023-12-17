@@ -8,6 +8,10 @@ public class Menu : MonoBehaviour
     public void OnPlayButton () {
         SceneManager.LoadScene(1);
     }
+    public void OnCreditsButton()
+    {
+        SceneManager.LoadScene(4);
+    }
 
     public void OnExitButton () {
         Application.Quit();
